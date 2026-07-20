@@ -1,0 +1,1622 @@
+<!-- ============================================================
+     THE BAYSIDE CAFE — Everett's Vegan Diner & Lounge
+     Warm editorial rebrand: cream / deep sage / muted gold / ink.
+     Rebrand everything by editing the :root tokens near the top.
+     Real photos live in /images (manifest at the very bottom).
+     ============================================================ -->
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Bayside Cafe — Everett's 100% Vegan Diner &amp; Lounge</title>
+<meta name="description" content="The Bayside Cafe is Everett's all-vegan diner and lounge. Plant-based burgers, brats, hand-breaded chick'n and loaded nachos. 4.7 stars on Google, 500+ reviews. Open 7 days." />
+<meta name="keywords" content="vegan restaurant near me, vegan food Everett, vegan diner Everett WA, plant-based burgers Everett, vegan restaurant Everett Washington, The Bayside Cafe, vegan lounge Everett" />
+<meta name="author" content="The Bayside Cafe" />
+<link rel="canonical" href="https://thebaysidecafe.com/" />
+
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="The Bayside Cafe — Everett's 100% Vegan Diner &amp; Lounge" />
+<meta property="og:description" content="Plant-based comfort food in downtown Everett. Burgers, brats, hand-breaded chick'n and loaded nachos. 4.7 stars on Google, 500+ reviews." />
+<meta property="og:image" content="images/hero.jpg" />
+<meta property="og:url" content="https://thebaysidecafe.com/" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Bayside Cafe — Everett's 100% Vegan Diner &amp; Lounge" />
+<meta name="twitter:description" content="Plant-based comfort food in downtown Everett. 4.7 stars on Google, 500+ reviews. Open 7 days." />
+<meta name="twitter:image" content="images/hero.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet" />
+
+<!-- EDIT — RESEARCH PASS (2026-07-15): Yelp URL and a Google Maps CID were found and are now
+     wired in below (Place ID ChIJe2BioNSrmlQRik77LVaMgXY, sourced via a Waze deep-link that
+     carries Google's place ID). Google's Maps/Business Profile page itself is a JS app that
+     couldn't be scraped directly, so rating/review-count come from cross-referencing several
+     secondary listings (RestaurantGuru, Restaurantji, Bing) that cite Google's numbers — they're
+     consistent at ~4.7 stars but the review COUNT varies by source/snapshot date (333 to 634).
+     CONFIRM THE EXACT CURRENT NUMBERS AGAINST THE LIVE GOOGLE LISTING RIGHT BEFORE LAUNCH —
+     this is exactly the kind of fact the source material warns drifts over time. HappyCow's
+     5.0/97 (below, in the Reviews section) was fetched directly and is HappyCow-specific, not
+     Google's — the two were wrongly conflated in an earlier pass and are now kept separate. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "The Bayside Cafe",
+  "description": "Everett's 100% vegan diner and lounge. Plant-based burgers, hand-breaded chick'n, brats and loaded nachos.",
+  "servesCuisine": "Vegan",
+  "priceRange": "$$",
+  "telephone": "+1-425-418-0640",
+  "image": "https://thebaysidecafe.com/images/hero.jpg",
+  "address": { "@type": "PostalAddress", "streetAddress": "2913 W Marine View Dr", "addressLocality": "Everett", "addressRegion": "WA", "postalCode": "98201", "addressCountry": "US" },
+  "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "533" },
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "11:00", "closes": "19:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday","Saturday"], "opens": "11:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "15:00" }
+  ],
+  "sameAs": ["https://www.facebook.com/thebaysidecafeeverett/", "https://www.instagram.com/the_bayside_cafe/", "https://www.yelp.com/biz/bayside-cafe-everett", "https://www.google.com/maps/place/?q=place_id:ChIJe2BioNSrmlQRik77LVaMgXY"]
+}
+</script>
+
+<style>
+/* ============================================================
+   DESIGN TOKENS — edit these to rebrand the whole site
+   ============================================================ */
+:root{
+  --paper:#f3e8d0;         /* warm flyer-stock cream base */
+  --paper-2:#ecdbb2;       /* deeper aged cream */
+  --sand:#e3cb96;          /* card tint / soft fills */
+  --sage:#c1502e;          /* burnt rust-orange (primary accent — off the real dining-room wall) */
+  --sage-deep:#8f3a1f;
+  --sage-soft:#e2916a;
+  --gold:#d6a233;          /* mustard gold (secondary accent) */
+  --gold-deep:#a97a1e;
+  --gold-soft:#eeca7d;
+  --pink:#e23a63;          /* neon-sign pink (tertiary accent) */
+  --pink-deep:#af1f45;
+  --teal:#22c9b8;          /* neon-sign teal, off the real "future is VEGAN" sign */
+  --teal-deep:#0f8f83;
+  --ink:#18120c;           /* near-black warm ink */
+  --ink-2:#241a10;
+  --creamtext:#f8edd4;     /* text on dark */
+  --muted:#6e6048;         /* warm grey body */
+  --line:#dbc78f;          /* hairlines */
+  --white:#fffaf0;
+
+  --shadow-sm:0 2px 14px rgba(24,18,12,.1);
+  --shadow-md:0 18px 42px rgba(24,18,12,.16);
+  --shadow-lg:0 36px 84px rgba(24,18,12,.24);
+  --shadow-sage:0 14px 34px rgba(193,80,46,.36);
+  --shadow-gold:0 14px 34px rgba(214,162,51,.32);
+  --shadow-pink:0 14px 34px rgba(226,58,99,.34);
+
+  --r-sm:14px; --r-md:22px; --r-lg:32px; --r-xl:46px; --r-pill:999px;
+
+  --f-display:"Fraunces",Georgia,serif;
+  --f-body:"Inter",system-ui,-apple-system,sans-serif;
+  --f-stamp:"Bebas Neue",Impact,"Inter",sans-serif;
+
+  --t-fast:.2s cubic-bezier(.4,0,.2,1);
+  --t:.36s cubic-bezier(.4,0,.2,1);
+  --t-slow:.7s cubic-bezier(.16,1,.3,1);
+
+  --nav-h:78px;
+  --maxw:1240px;
+}
+
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:var(--f-body);background:var(--paper);color:var(--ink);
+  line-height:1.64;overflow-x:hidden;-webkit-font-smoothing:antialiased;position:relative;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+.container{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 clamp(20px,5vw,46px)}
+
+h1,h2,h3{font-family:var(--f-display);line-height:1.06;font-weight:600;letter-spacing:-.015em}
+.accent-i{font-style:italic;font-weight:500;color:var(--sage);text-shadow:3px 3px 0 rgba(226,58,99,.22)}
+.accent-t{font-style:italic;font-weight:500;color:var(--teal);text-shadow:0 0 10px rgba(34,201,184,.6),0 0 26px rgba(34,201,184,.38)}
+.eyebrow{
+  font-family:var(--f-stamp);font-size:1.05rem;font-weight:400;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold-deep);display:inline-flex;align-items:center;gap:.6rem;
+}
+.eyebrow::before{content:"";width:24px;height:3px;background:var(--sage);border-radius:2px}
+.eyebrow.on-dark{color:var(--gold-soft)}
+.eyebrow.on-dark::before{background:var(--gold-soft)}
+.section{position:relative;padding:clamp(68px,9vw,128px) 0;overflow:hidden}
+
+/* skip link */
+.skip-link{position:absolute;top:-60px;left:12px;z-index:100;background:var(--ink);color:var(--creamtext);
+  padding:.8rem 1.3rem;border-radius:var(--r-sm);font-weight:600;transition:top var(--t-fast)}
+.skip-link:focus{top:12px}
+
+/* grain overlay */
+.grain{position:fixed;inset:0;z-index:120;pointer-events:none;opacity:.045;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* scroll progress */
+.progress{position:fixed;top:0;left:0;height:3px;width:0%;z-index:110;
+  background:linear-gradient(90deg,var(--sage),var(--gold));transition:width .08s linear}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+  font-family:var(--f-stamp);font-weight:400;font-size:1.08rem;letter-spacing:.04em;text-transform:uppercase;
+  padding:.85rem 1.7rem;border-radius:var(--r-pill);cursor:pointer;border:none;white-space:nowrap;
+  transition:transform var(--t-fast),box-shadow var(--t),background var(--t),color var(--t);}
+.btn:hover{transform:translateY(-3px)}
+.btn svg{width:17px;height:17px}
+.btn-primary{background:var(--sage);color:#fff;box-shadow:var(--shadow-sage)}
+.btn-primary:hover{background:var(--sage-deep);box-shadow:0 20px 44px rgba(79,107,82,.42)}
+.btn-gold{background:var(--gold);color:#fff;box-shadow:var(--shadow-gold)}
+.btn-gold:hover{background:var(--gold-deep)}
+.btn-ink{background:var(--ink);color:var(--creamtext);box-shadow:var(--shadow-md)}
+.btn-ink:hover{background:var(--ink-2)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.5)}
+.btn-ghost:hover{background:rgba(255,255,255,.14);border-color:#fff}
+.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
+.btn-outline:hover{background:var(--ink);color:var(--creamtext)}
+.btn-icon{width:47px;height:47px;padding:0;border-radius:50%;flex:none}
+
+/* decorative hand-drawn doodles */
+.mark{flex:none}
+
+/* ============================================================
+   OCTOPUS DECORATIONS — scattered background texture reusing
+   the cafe's own octagon-sign octopus, in place of the generic
+   bakery-template wheat stalks this section used to carry.
+   Two color variants only (light-bg / dark-bg); every instance
+   just varies size, rotation and position via inline style.
+   ============================================================ */
+.octo-deco{position:absolute;opacity:.36;pointer-events:none;user-select:none;z-index:0}
+.octo-deco.on-dark{opacity:.22}
+
+/* ============================================================
+   ANNOUNCEMENT BAR
+   ============================================================ */
+.announce{background:var(--ink);color:var(--creamtext);font-size:.83rem;font-weight:500;
+  text-align:center;padding:.55rem 1rem;letter-spacing:.01em;position:relative;z-index:60}
+.announce b{color:var(--gold-soft);font-weight:700}
+.announce .sep{opacity:.4;margin:0 .55rem}
+
+/* ============================================================
+   NAV — blurred background visible from the very first frame
+   ============================================================ */
+/* EDIT (2026-07-15 browser QA): was position:fixed;top:0, which sat exactly on top of the
+   in-flow .announce bar (same z:0 origin) — since .announce has a higher z-index (60) than the
+   old z-index:50 here, it silently ate every click on the nav's top ~60px, including the mobile
+   hamburger, for as long as the announce bar was on screen. Confirmed with Playwright: the
+   hamburger was un-clickable until scrolled past. position:sticky fixes it structurally (nav
+   now sits in normal flow below the announce bar, then sticks once scrolled to it) instead of
+   just reshuffling z-index numbers. */
+.nav{position:sticky;top:0;left:0;right:0;z-index:61;height:var(--nav-h);display:flex;align-items:center;
+  background:rgba(250,245,233,.86);backdrop-filter:blur(16px) saturate(1.3);box-shadow:var(--shadow-sm);
+  transition:box-shadow var(--t)}
+.nav.scrolled{box-shadow:var(--shadow-md)}
+.nav .container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+.brand{display:flex;align-items:center;gap:.66rem;color:var(--ink)}
+.brand .mark{height:44px;width:auto;flex:none}
+.brand .wm{display:flex;flex-direction:column;line-height:1}
+.brand .wm b{font-family:var(--f-display);font-weight:600;font-size:1.28rem;letter-spacing:-.01em}
+.brand .wm small{font-family:var(--f-stamp);font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;opacity:.78;margin-top:3px;color:var(--gold-deep)}
+.nav-links{display:flex;gap:2rem;list-style:none}
+.nav-links a{font-weight:500;font-size:.95rem;color:var(--muted);position:relative;transition:color var(--t-fast)}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--gold);transition:width var(--t)}
+.nav-links a:hover{color:var(--sage)}
+.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:.7rem}
+.nav-call{color:var(--ink);border:1.5px solid var(--line);background:var(--white)}
+.nav-call:hover{border-color:var(--sage);color:var(--sage)}
+.nav .btn-primary{padding:.72rem 1.4rem;font-size:.9rem}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:6px;z-index:70}
+.hamburger span{width:26px;height:2.5px;background:var(--ink);border-radius:2px;transition:var(--t)}
+
+.overlay{position:fixed;inset:0;z-index:65;background:var(--ink);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;
+  opacity:0;visibility:hidden;transform:translateY(-12px);transition:var(--t)}
+.overlay.open{opacity:1;visibility:visible;transform:none}
+.overlay a{font-family:var(--f-display);font-size:1.8rem;color:var(--creamtext);font-weight:500}
+.overlay a:hover{color:var(--gold-soft)}
+.overlay .btn{margin-top:.5rem}
+.overlay-close{position:absolute;top:22px;right:26px;font-size:2.1rem;color:var(--creamtext);background:none;border:none;cursor:pointer;line-height:1}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;overflow:hidden;min-height:clamp(560px,92svh,860px);display:flex;align-items:center;padding:calc(var(--nav-h) + 46px) 0 3rem}
+.hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,5vw,4rem);align-items:center}
+.pill{display:inline-flex;align-items:center;gap:.55rem;background:var(--white);
+  border:1px solid var(--line);padding:.44rem 1rem;border-radius:var(--r-pill);font-size:.82rem;font-weight:600;
+  box-shadow:var(--shadow-sm)}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--gold);position:relative}
+.dot.open{background:var(--sage)}
+.dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid;animation:pulse 1.9s ease-out infinite;opacity:.6}
+.dot.open::after{border-color:var(--sage)}.dot:not(.open)::after{border-color:var(--gold)}
+@keyframes pulse{0%{transform:scale(.7);opacity:.7}100%{transform:scale(2);opacity:0}}
+.hero h1{font-size:clamp(2.7rem,5.6vw,4.6rem);margin:1.3rem 0 1.1rem}
+.hero h1 .word{display:inline-block;opacity:0;transform:translateY(.5em);animation:wordIn .7s cubic-bezier(.16,1,.3,1) forwards;animation-delay:calc(var(--i) * 70ms)}
+@keyframes wordIn{to{opacity:1;transform:none}}
+.hero .sub{font-size:clamp(1.05rem,2vw,1.22rem);max-width:34rem;color:var(--muted);margin-bottom:2rem}
+.hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2.4rem}
+.trust-row{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.avatar-stack{display:flex}
+.avatar-stack .avatar{width:38px;height:38px;font-size:.76rem;border:3px solid var(--paper);margin-left:-12px}
+.avatar-stack .avatar:first-child{margin-left:0}
+.trust-meta{display:flex;flex-direction:column;line-height:1.3}
+.trust-meta .stars{color:var(--gold);font-size:.95rem}
+.trust-meta small{color:var(--muted);font-size:.82rem}
+
+.hero-visual{position:relative}
+.bento-collage{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:auto auto;gap:.9rem;position:relative}
+.bento-collage .b1{grid-row:span 2;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:3/4}
+.bento-collage .b2{border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:5/4}
+.bento-collage .b3{border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:5/4}
+.bento-collage img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-slow)}
+.bento-collage figure:hover img{transform:scale(1.06)}
+.float-card{position:absolute;background:var(--white);border-radius:var(--r-md);box-shadow:var(--shadow-lg);
+  padding:1rem 1.3rem;display:flex;align-items:center;gap:.8rem;z-index:3}
+.float-card.rating{top:-22px;right:-18px}
+.float-card .num{font-family:var(--f-display);font-size:1.9rem;font-weight:600;color:var(--sage)}
+.float-card .meta{line-height:1.3}
+.float-card .meta .stars{color:var(--gold);font-size:.85rem}
+.float-card .meta small{color:var(--muted);font-size:.78rem;display:block}
+.float-pill{position:absolute;bottom:20px;left:-24px;background:var(--sage);color:#fff;border-radius:var(--r-pill);
+  padding:.7rem 1.2rem;font-family:var(--f-stamp);font-size:1.05rem;letter-spacing:.03em;font-weight:400;
+  box-shadow:var(--shadow-sage);display:flex;align-items:center;gap:.5rem;z-index:3;transform:rotate(-4deg)}
+.float-pill svg{width:16px;height:16px}
+
+/* ============================================================
+   STAT TILES
+   ============================================================ */
+.stats-bar{position:relative;overflow:hidden;background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding:2.6rem 0}
+.stat-tile{text-align:center}
+.stat-tile .n{font-family:var(--f-display);font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:600;color:var(--sage)}
+.stat-tile:nth-child(2) .n{color:var(--pink)}
+.stat-tile:nth-child(3) .n{color:var(--teal-deep)}
+.stat-tile:nth-child(4) .n{color:var(--gold-deep)}
+.stat-tile .l{font-family:var(--f-stamp);font-size:.98rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:.15rem}
+
+/* ============================================================
+   TICKER (dynamic-width seamless marquee)
+   ============================================================ */
+.ticker{background:var(--sage);color:#fff;padding:.95rem 0;overflow:hidden;white-space:nowrap;position:relative;z-index:3}
+.ticker-track{display:inline-flex;gap:2.6rem;will-change:transform}
+.ticker span{font-family:var(--f-display);font-style:italic;font-size:1.02rem;font-weight:500;display:inline-flex;align-items:center;gap:2.6rem}
+.ticker span::after{content:"✦";font-style:normal;color:rgba(255,255,255,.6);font-size:.8rem}
+
+/* ============================================================
+   SECTION HEADS
+   ============================================================ */
+.head{max-width:640px;margin-bottom:3.2rem}
+.head.center{margin-left:auto;margin-right:auto;text-align:center}
+.head h2{font-size:clamp(2.1rem,4.6vw,3.3rem);margin:.9rem 0 .7rem}
+.head p{color:var(--muted);font-size:1.06rem}
+
+/* ============================================================
+   FAVORITES
+   ============================================================ */
+.fav-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.7rem}
+.fav-grid .featured{grid-row:span 2}
+.card{background:var(--white);border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-sm);
+  border:1px solid var(--line);transition:transform var(--t),box-shadow var(--t);position:relative;display:flex;flex-direction:column}
+.card:hover{transform:translateY(-9px);box-shadow:var(--shadow-lg)}
+.card-img{overflow:hidden;aspect-ratio:4/3}
+.featured .card-img{aspect-ratio:auto;flex:1;min-height:250px}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-slow)}
+.card:hover .card-img img{transform:scale(1.07)}
+.badge{position:absolute;top:15px;left:15px;background:var(--gold);color:#fff;font-family:var(--f-stamp);font-size:.92rem;font-weight:400;
+  letter-spacing:.04em;text-transform:uppercase;padding:.3rem .85rem;border-radius:var(--r-pill);z-index:2;box-shadow:var(--shadow-sm);
+  transform:rotate(-3deg);border:2px solid rgba(255,255,255,.55)}
+.badge.sage{background:var(--sage)}
+.badge.pink{background:var(--pink)}
+.card-body{padding:1.4rem 1.5rem 1.6rem}
+.card-body .row{display:flex;justify-content:space-between;align-items:baseline;gap:1rem}
+.card-body h3{font-size:1.42rem;font-weight:600}
+.card-body .price{font-family:var(--f-display);font-weight:600;color:var(--gold-deep);font-size:1.3rem;white-space:nowrap}
+.card-body p{color:var(--muted);font-size:.95rem;margin:.5rem 0 .85rem}
+.stars{color:var(--gold);font-size:.9rem;letter-spacing:.09em}
+.stars small{color:var(--muted);margin-left:.45rem;font-size:.82rem;letter-spacing:0}
+
+/* ============================================================
+   ATMOSPHERE STRIP
+   ============================================================ */
+.atmos{position:relative;overflow:hidden;min-height:66vh;display:flex;align-items:center;color:#fff}
+.atmos .bg{position:absolute;inset:0;z-index:-1}
+.atmos .bg img{width:100%;height:100%;object-fit:cover}
+.atmos .bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(92deg,rgba(42,38,32,.92),rgba(42,38,32,.5) 60%,rgba(79,107,82,.32))}
+.atmos-box{max-width:540px}
+.atmos-box h2{font-size:clamp(2rem,4.2vw,3rem);margin:1rem 0 1.3rem}
+.atmos-box p{color:rgba(255,255,255,.9);margin-bottom:1.7rem}
+
+/* ============================================================
+   REVIEWS
+   ============================================================ */
+.reviews{background:var(--paper-2)}
+.rating-pill{display:inline-flex;align-items:center;gap:1rem;background:var(--white);border-radius:var(--r-pill);
+  padding:.7rem 1.6rem .7rem .8rem;box-shadow:var(--shadow-md);margin-bottom:2.8rem}
+.rating-pill .big{font-family:var(--f-display);font-size:2.1rem;font-weight:600;color:#fff;background:var(--sage);
+  border-radius:50%;width:66px;height:66px;display:grid;place-items:center}
+.rating-pill .meta{display:flex;flex-direction:column;line-height:1.35}
+.rating-pill .meta .stars{font-size:1.06rem}
+.rating-pill .meta small{color:var(--muted);font-size:.85rem}
+.marquee{overflow:hidden;position:relative;-webkit-mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 5%,#000 95%,transparent)}
+.marquee-track{display:flex;gap:1.4rem;width:max-content;will-change:transform}
+.marquee:hover .marquee-track,.marquee.paused .marquee-track{animation-play-state:paused}
+.review-card{background:var(--white);border-radius:var(--r-md);padding:1.8rem 1.6rem;width:344px;flex:none;
+  box-shadow:var(--shadow-sm);border:1px solid var(--line);display:flex;flex-direction:column;gap:.7rem}
+.review-card .quote{font-family:var(--f-display);font-size:2.8rem;line-height:.5;color:var(--gold);height:.6em}
+.review-card p{color:var(--muted);font-size:.95rem}
+.review-card .who{display:flex;align-items:center;gap:.7rem;margin-top:auto;padding-top:.5rem}
+.avatar{width:44px;height:44px;border-radius:50%;background:var(--sage);color:#fff;display:grid;place-items:center;font-weight:700;font-size:.9rem;flex:none}
+.who b{font-size:.92rem}.who small{color:var(--muted);font-size:.8rem;display:block}
+
+/* ============================================================
+   MENU
+   ============================================================ */
+.menu-wrap{display:grid;grid-template-columns:350px 1fr;gap:2.8rem;align-items:start}
+.menu-side{position:sticky;top:calc(var(--nav-h) + 20px)}
+.menu-photo{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:1.4rem;aspect-ratio:4/5;position:relative}
+.menu-photo img{width:100%;height:100%;object-fit:cover}
+.menu-photo .tag{position:absolute;left:16px;bottom:16px;background:rgba(42,38,32,.74);backdrop-filter:blur(6px);
+  color:#fff;font-size:.8rem;font-weight:600;padding:.5rem .95rem;border-radius:var(--r-pill)}
+.tabs{display:flex;flex-direction:column;gap:.55rem}
+.tab{text-align:left;background:var(--white);border:1px solid var(--line);border-radius:var(--r-sm);
+  padding:.85rem 1.25rem;font-family:var(--f-stamp);font-weight:400;letter-spacing:.03em;text-transform:uppercase;font-size:1.12rem;cursor:pointer;color:var(--muted);
+  transition:var(--t-fast);display:flex;justify-content:space-between;align-items:center}
+.tab:hover{border-color:var(--gold-soft);color:var(--gold-deep)}
+.tab[aria-selected="true"]{background:var(--ink);color:var(--creamtext);border-color:var(--ink)}
+.tab[aria-selected="true"] .arr{opacity:1;color:var(--gold-soft)}
+.tab .arr{opacity:0;transition:var(--t-fast)}
+.panel{display:none;animation:fade .45s ease}
+.panel.active{display:block}
+@keyframes fade{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.m-item{display:flex;justify-content:space-between;gap:1.3rem;padding:1.25rem 0;border-bottom:1px dashed var(--line)}
+.m-item:last-child{border-bottom:none}
+.m-item h4{font-family:var(--f-display);font-size:1.28rem;font-weight:600;margin-bottom:.28rem}
+.m-item p{color:var(--muted);font-size:.92rem;max-width:46ch}
+.m-item .price{font-family:var(--f-display);font-weight:600;color:var(--gold-deep);font-size:1.24rem;white-space:nowrap}
+.menu-foot{margin-top:2rem;padding-top:1.6rem;border-top:1px solid var(--line)}
+.menu-foot-row{display:flex;justify-content:space-between;align-items:center;gap:1.2rem;flex-wrap:wrap;margin-bottom:1.2rem}
+.menu-foot small{color:var(--muted);max-width:42ch}
+.menu-foot-btns{display:flex;gap:.6rem;flex-wrap:wrap}
+.customize{border:1px solid var(--line);border-radius:var(--r-sm);background:var(--white);overflow:hidden}
+.customize summary{cursor:pointer;list-style:none;padding:1rem 1.25rem;font-weight:700;font-size:.92rem;
+  display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+.customize summary::-webkit-details-marker{display:none}
+.customize summary::after{content:"+";font-size:1.3rem;color:var(--sage);transition:transform var(--t-fast)}
+.customize[open] summary::after{transform:rotate(45deg)}
+.customize .cbody{padding:0 1.25rem 1.2rem;color:var(--muted);font-size:.92rem}
+
+/* ============================================================
+   STORY
+   ============================================================ */
+.story-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:clamp(2rem,5vw,4.6rem);align-items:center}
+.story-photo{position:relative}
+.story-photo img{border-radius:var(--r-lg);box-shadow:var(--shadow-lg);aspect-ratio:4/5;object-fit:cover;object-position:70% 22%;width:100%}
+.since{position:absolute;bottom:-24px;right:-16px;background:var(--gold);color:#fff;border-radius:50%;
+  width:122px;height:122px;display:grid;place-items:center;text-align:center;box-shadow:var(--shadow-md);
+  font-weight:600;line-height:1.1;border:6px solid var(--paper)}
+.since b{font-family:var(--f-display);font-size:2rem;display:block}
+.since small{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase}
+.pull{font-family:var(--f-display);font-style:italic;font-size:clamp(1.45rem,2.6vw,2rem);color:var(--sage);line-height:1.32;margin:1.1rem 0 1.3rem}
+.story-grid .body{color:var(--muted);margin-bottom:2rem}
+.story-grid .body b{color:var(--ink)}
+.values{display:flex;flex-direction:column;gap:1.15rem}
+.value{display:flex;gap:1rem;align-items:flex-start}
+.value .ic{width:48px;height:48px;flex:none;border-radius:var(--r-sm);background:var(--sand);color:var(--sage);display:grid;place-items:center}
+.value h4{font-family:var(--f-body);font-size:1.04rem;font-weight:700;margin-bottom:.15rem}
+.story-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-top:2rem}
+.value p{color:var(--muted);font-size:.92rem}
+
+/* ============================================================
+   VISIT
+   ============================================================ */
+.visit-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:2.4rem;align-items:stretch}
+.hours-card{background:var(--white);border-radius:var(--r-lg);box-shadow:var(--shadow-md);border:1px solid var(--line);padding:2.1rem;display:flex;flex-direction:column}
+.hours-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.3rem}
+.hours-head h3{font-size:1.45rem;font-weight:600}
+.status-badge{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem .95rem;border-radius:var(--r-pill);font-family:var(--f-stamp);letter-spacing:.04em;text-transform:uppercase;font-size:1rem}
+.status-badge.open{background:#e5efe3;color:var(--sage-deep)}
+.status-badge.closed{background:#f5ead6;color:var(--gold-deep)}
+.hrow{display:flex;justify-content:space-between;padding:.74rem 0;border-bottom:1px solid var(--line);font-size:.96rem}
+.hrow:last-of-type{border-bottom:none}
+.hrow.today{background:var(--sand);margin:0 -1.1rem;padding:.74rem 1.1rem;border-radius:var(--r-sm);border-bottom:none;font-weight:700;color:var(--gold-deep)}
+.hrow.today .day::before{content:"★ ";color:var(--gold)}
+.hrow .time{color:var(--muted)}.hrow.today .time{color:var(--gold-deep)}
+.closed-msg{margin-top:1rem;font-size:.9rem;color:var(--muted);background:var(--paper-2);padding:.85rem 1rem;border-radius:var(--r-sm)}
+.amenities{display:flex;flex-wrap:wrap;gap:.55rem;margin-top:1.5rem}
+.chip{background:var(--sand);color:var(--ink);font-family:var(--f-stamp);font-size:.95rem;letter-spacing:.03em;padding:.4rem .9rem;border-radius:var(--r-pill)}
+.visit-right{display:flex;flex-direction:column;gap:1.2rem}
+.find-photo{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);position:relative;aspect-ratio:16/10}
+.find-photo img{width:100%;height:100%;object-fit:cover}
+.find-photo .tag{position:absolute;left:16px;bottom:16px;background:rgba(42,38,32,.74);backdrop-filter:blur(6px);color:#fff;
+  font-size:.82rem;font-weight:600;padding:.5rem 1rem;border-radius:var(--r-pill);display:flex;align-items:center;gap:.45rem}
+.map-embed{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);border:1px solid var(--line);min-height:230px;flex:1}
+.map-embed iframe{width:100%;height:100%;min-height:230px;border:0;display:block}
+.addr-card{background:var(--sage);color:#eafcf2;border-radius:var(--r-lg);padding:1.7rem 1.9rem;box-shadow:var(--shadow-md)}
+.addr-card h4{font-family:var(--f-display);font-size:1.35rem;color:#fff;margin-bottom:.4rem;font-weight:600}
+.addr-card p{color:rgba(234,252,242,.86);font-size:.95rem;margin-bottom:1.2rem}
+.addr-card .acts{display:flex;gap:.7rem;flex-wrap:wrap}
+.addr-card .btn-gold{box-shadow:none}
+
+/* ============================================================
+   COMMUNITY CTA
+   ============================================================ */
+.cta-dark{background:var(--ink);color:var(--creamtext);text-align:center;position:relative;overflow:hidden;
+  border-radius:var(--r-xl) var(--r-xl) 0 0;margin-top:-1px}
+.cta-dark .container{position:relative;z-index:1}
+.cta-dark h2{font-size:clamp(2.1rem,5vw,3.6rem);margin:1rem auto;max-width:17ch}
+.cta-dark p{color:rgba(250,243,227,.82);max-width:46ch;margin:0 auto 2rem;font-size:1.06rem}
+.cta-acts{display:flex;gap:.9rem;justify-content:center;flex-wrap:wrap;margin-bottom:1.9rem}
+.socials{display:flex;gap:.7rem;justify-content:center;margin-bottom:2rem}
+.socials a{width:47px;height:47px;border-radius:50%;background:rgba(255,255,255,.1);display:grid;place-items:center;transition:var(--t-fast);color:var(--creamtext)}
+.socials a:hover{background:var(--gold);color:#fff;transform:translateY(-3px)}
+.perks{display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;color:rgba(250,243,227,.82);font-size:.92rem}
+.perks span{display:inline-flex;align-items:center;gap:.45rem}
+.perks span::before{content:"✓";color:var(--gold-soft);font-weight:700}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{position:relative;overflow:hidden;background:#211a10;color:rgba(250,243,227,.72);padding:clamp(52px,7vw,82px) 0 0}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1.3fr;gap:2.5rem;padding-bottom:2.6rem}
+.foot-brand{display:flex;align-items:center;gap:.6rem;color:#fff;margin-bottom:1rem}
+.foot-brand .mark{width:40px;height:40px;color:var(--gold-soft)}
+.foot-brand b{font-family:var(--f-display);font-weight:600;font-size:1.4rem}
+.footer h5{color:#fff;font-family:var(--f-body);font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:1.1rem}
+.footer ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+.footer a:hover{color:var(--gold-soft)}
+.foot-col p{font-size:.92rem;line-height:1.75}
+.foot-socials{display:flex;gap:.6rem;margin-top:1.2rem}
+.foot-socials a{width:39px;height:39px;border-radius:50%;background:rgba(255,255,255,.08);display:grid;place-items:center;transition:var(--t-fast)}
+.foot-socials a:hover{background:var(--gold);color:#fff}
+.copybar{border-top:1px solid rgba(255,255,255,.1);padding:1.4rem 0;text-align:center;font-size:.84rem;color:rgba(250,243,227,.5)}
+
+/* ============================================================
+   FLOATING BUTTONS (desktop only, hidden ≤1180px)
+   ============================================================ */
+.floaters{position:fixed;right:18px;bottom:18px;z-index:40;display:flex;flex-direction:column;gap:.6rem;
+  opacity:0;visibility:hidden;transform:translateY(14px);transition:var(--t)}
+.floaters.show{opacity:1;visibility:visible;transform:none}
+.fab{width:56px;height:56px;border-radius:50%;display:grid;place-items:center;box-shadow:var(--shadow-md);color:#fff;transition:transform var(--t-fast)}
+.fab:hover{transform:scale(1.09)}
+.fab.call{background:var(--sage)}
+.fab.order{background:var(--gold)}
+.scrolltop{position:fixed;left:18px;bottom:18px;z-index:40;width:47px;height:47px;border-radius:50%;background:var(--ink);color:#fff;
+  display:grid;place-items:center;cursor:pointer;border:none;box-shadow:var(--shadow-md);
+  opacity:0;visibility:hidden;transform:translateY(14px);transition:var(--t)}
+.scrolltop.show{opacity:1;visibility:visible;transform:none}
+
+/* ============================================================
+   STICKY MOBILE BOTTOM BAR (≤1180px — phones and tablets)
+   ============================================================ */
+.mobile-bar{display:none;position:fixed;left:0;right:0;bottom:0;z-index:80;gap:.6rem;
+  padding:.65rem .7rem calc(.65rem + env(safe-area-inset-bottom));
+  background:rgba(250,245,233,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line);box-shadow:0 -8px 28px rgba(42,38,32,.1)}
+.mobile-bar a{flex:1;padding:.85rem 1rem;font-size:.92rem}
+
+/* ============================================================
+   REVEAL
+   ============================================================ */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+.reveal.d1{transition-delay:.1s}.reveal.d2{transition-delay:.2s}.reveal.d3{transition-delay:.3s}.reveal.d4{transition-delay:.4s}
+
+/* ============================================================
+   PHOTO TREATMENT — these are real customer/press phone photos
+   with wildly inconsistent lighting and white balance. Rather
+   than fight that, unify them with one color grade and treat
+   every shot like a stuck-up flyer photo, not a flawless stock
+   image — tilted, taped, framed in white + ink.
+   ============================================================ */
+img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
+
+.bento-collage figure,.story-photo img,.find-photo{transition:transform var(--t)}
+.bento-collage figure{box-shadow:var(--shadow-lg),inset 0 0 0 5px var(--white),inset 0 0 0 8px var(--ink)}
+.story-photo img{box-shadow:var(--shadow-lg),inset 0 0 0 5px var(--white),inset 0 0 0 8px var(--ink)}
+.find-photo{box-shadow:var(--shadow-lg),inset 0 0 0 5px var(--white),inset 0 0 0 8px var(--ink)}
+
+.bento-collage .b1{transform:rotate(-1.3deg)}
+.bento-collage .b2{transform:rotate(1.8deg)}
+.bento-collage .b3{transform:rotate(-1.2deg)}
+.bento-collage figure:hover{transform:rotate(0) scale(1.02)}
+.story-photo img{transform:rotate(-1.4deg)}
+.story-photo:hover img{transform:rotate(0)}
+.find-photo{transform:rotate(1.1deg)}
+.find-photo:hover{transform:rotate(0)}
+
+.bento-collage figure::after,.story-photo::after,.find-photo::after{
+  content:"";position:absolute;top:8px;left:50%;width:58px;height:24px;margin-left:-29px;
+  background:linear-gradient(180deg,rgba(238,202,125,.9),rgba(214,162,51,.72));
+  box-shadow:var(--shadow-sm);transform:rotate(-4deg);z-index:4;pointer-events:none;opacity:.9
+}
+.bento-collage .b2::after{transform:rotate(5deg)}
+.bento-collage .b3::after{transform:rotate(-6deg)}
+.find-photo::after{transform:rotate(4deg)}
+.story-photo{position:relative}
+
+/* ============================================================
+   HALFTONE TEXTURE — a faint print-shop dot layer over the
+   paper-2 bands, reinforcing the zine/flyer material.
+   ============================================================ */
+.stats-bar,.reviews{position:relative}
+.stats-bar::before,.reviews::before{
+  content:"";position:absolute;inset:0;pointer-events:none;z-index:0;opacity:.07;
+  background-image:radial-gradient(var(--ink) 1px,transparent 1.4px);background-size:13px 13px;
+  -webkit-mask-image:linear-gradient(180deg,transparent,#000 16%,#000 84%,transparent);
+  mask-image:linear-gradient(180deg,transparent,#000 16%,#000 84%,transparent)
+}
+.stats-bar .container,.reviews .container,.reviews .marquee{position:relative;z-index:1}
+
+/* ============================================================
+   TORN EDGE — a jagged paper-tear seam into the dark atmosphere
+   band, instead of a plain straight line.
+   ============================================================ */
+.atmos::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:14px;z-index:2;background:var(--paper);
+  clip-path:polygon(0 0,100% 0,100% 100%,96% 35%,92% 100%,88% 40%,84% 100%,80% 30%,76% 100%,72% 45%,68% 100%,64% 25%,60% 100%,56% 40%,52% 100%,48% 30%,44% 100%,40% 45%,36% 100%,32% 25%,28% 100%,24% 40%,20% 100%,16% 30%,12% 100%,8% 45%,4% 100%,0 30%)
+}
+
+/* ============================================================
+   RESPONSIVE — 1080 / 900 / 800(nav collapses) / 620
+   ============================================================ */
+@media(max-width:1080px){
+  .hero .container{grid-template-columns:1fr}
+  .hero-visual{max-width:520px;margin:0 auto}
+  .menu-wrap{grid-template-columns:1fr}
+  .menu-side{position:static}
+  .menu-photo{aspect-ratio:16/9}
+  .tabs{flex-direction:row;flex-wrap:wrap}
+  .tab{flex:1;min-width:140px;justify-content:center}
+  .tab .arr{display:none}
+}
+@media(max-width:900px){
+  .story-grid,.visit-grid{grid-template-columns:1fr}
+  .story-photo{max-width:470px;margin:0 auto 2.4rem}
+  .fav-grid{grid-template-columns:1fr 1fr}
+  .fav-grid .featured{grid-row:auto;grid-column:span 2}
+  .foot-grid{grid-template-columns:1fr 1fr}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media(max-width:800px){
+  .nav-links,.nav-call,.nav .btn-primary{display:none}
+  .hamburger{display:flex}
+  .section{padding:56px 0}
+}
+@media(max-width:1180px){
+  .floaters,.scrolltop{display:none!important}
+  .mobile-bar{display:flex}
+  body{padding-bottom:74px}
+}
+@media(max-width:620px){
+  .fav-grid{grid-template-columns:1fr}
+  .fav-grid .featured{grid-column:auto}
+  .foot-grid{grid-template-columns:1fr}
+  .hero-btns .btn,.cta-acts .btn{flex:1}
+  .review-card{width:82vw;max-width:330px}
+  .rating-pill{width:100%}
+  .since{width:104px;height:104px;right:8px}
+  .float-card.rating{top:-14px;right:-8px;padding:.7rem 1rem}
+  .float-card .num{font-size:1.4rem}
+  .float-pill{left:-8px;bottom:12px;padding:.55rem .9rem;font-size:.76rem}
+  .stats-grid{grid-template-columns:1fr 1fr;gap:1.4rem}
+}
+@media(min-width:820px) and (max-width:1180px){
+  .hero-visual{max-width:none}
+  .fav-grid{grid-template-columns:1fr 1fr}
+  .fav-grid .card:nth-of-type(2){display:none}
+  .fav-grid .featured{grid-row:auto;grid-column:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation:none!important;scroll-behavior:auto;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+  .hero h1 .word{opacity:1;transform:none}
+}
+</style>
+
+<div class="grain" aria-hidden="true"></div>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- ===================== ANNOUNCEMENT ===================== -->
+<div class="announce" id="announce">Everett's 100% vegan diner &amp; lounge<span class="sep">·</span>Plant-based, always</div>
+
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="container">
+    <a href="#top" class="brand" aria-label="The Bayside Cafe home">
+      <img class="mark" src="images/logo.png" alt="" />
+      <span class="wm"><b>The Bayside</b><small>Vegan Diner</small></span>
+    </a>
+    <nav aria-label="Primary">
+      <ul class="nav-links">
+        <li><a href="#favorites">Favorites</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#story">Our Story</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+    <div class="nav-cta">
+      <a href="tel:+14254180640" class="btn btn-icon nav-call" aria-label="Call The Bayside Cafe">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1z"/></svg>
+      </a>
+      <a href="https://www.ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE4MDIlMjBIZXdpdHQlMjBBdmUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJjODlkOTBlMi0zMjYyLTcwNDAtYzZiZi0zZGFmOWRmZGExOGElMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ3Ljk3OTEwMjMlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIyLjIwNTU2NDIlN0Q%3D" data-order target="_blank" rel="noopener" class="btn btn-primary">Order Online</a>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="overlay"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="overlay" id="overlay">
+  <button class="overlay-close" id="overlayClose" aria-label="Close menu">&times;</button>
+  <a href="#favorites">Favorites</a>
+  <a href="#menu">Menu</a>
+  <a href="#story">Our Story</a>
+  <a href="#visit">Visit</a>
+  <a href="https://www.ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE4MDIlMjBIZXdpdHQlMjBBdmUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJjODlkOTBlMi0zMjYyLTcwNDAtYzZiZi0zZGFmOWRmZGExOGElMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ3Ljk3OTEwMjMlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIyLjIwNTU2NDIlN0Q%3D" data-order target="_blank" rel="noopener" class="btn btn-primary">Order Online</a>
+  <a href="tel:+14254180640" class="btn btn-ghost">Call 425-418-0640</a>
+</div>
+
+<span id="top"></span>
+
+<main id="main">
+<!-- ===================== HERO ===================== -->
+<section class="hero">
+  <svg class="octo-deco" width="190" height="206" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:60px;left:-55px;transform:rotate(-18deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco" width="100" height="108" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:120px;right:4%;transform:rotate(14deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco" width="76" height="82" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:6%;left:6%;transform:rotate(9deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <div class="container">
+    <div class="hero-copy">
+      <span class="pill"><span class="dot" id="heroDot"></span><span id="heroStatus">Open now · Everett, WA</span></span>
+      <h1 id="heroHeadline" aria-label="Comfort food, gone fully vegan.">Comfort food,<br>gone <span class="accent-i">fully vegan.</span></h1>
+      <p class="sub">Pull up a booth at Everett's all-vegan diner and lounge. Stacked burgers, hand-breaded chick'n and loaded nachos that taste like the place you grew up on. Everyone's welcome here.</p>
+      <div class="hero-btns">
+        <a href="https://www.ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE4MDIlMjBIZXdpdHQlMjBBdmUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJjODlkOTBlMi0zMjYyLTcwNDAtYzZiZi0zZGFmOWRmZGExOGElMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ3Ljk3OTEwMjMlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIyLjIwNTU2NDIlN0Q%3D" data-order target="_blank" rel="noopener" class="btn btn-primary">Order Online
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#menu" class="btn btn-outline">See the Menu</a>
+      </div>
+      <div class="trust-row">
+        <div class="avatar-stack" aria-hidden="true">
+          <div class="avatar">HP</div><div class="avatar">II</div><div class="avatar">JC</div><div class="avatar">JB</div>
+        </div>
+        <div class="trust-meta">
+          <span class="stars">★★★★★ <b>4.7</b></span>
+          <small>500+ reviews on Google &amp; HappyCow</small>
+        </div>
+      </div>
+    </div>
+    <div class="hero-visual" id="heroVisual">
+      <div class="bento-collage">
+        <figure class="b1"><img loading="eager" src="images/hero.jpg" alt="A crispy hand-breaded vegan chick'n sandwich with curly fries at The Bayside Cafe"
+          onerror="this.src='https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=1000&q=80'" /></figure>
+        <figure class="b2"><img loading="lazy" src="images/product-bomber.jpg" alt="The Bomber vegan burger served with tater tots"
+          onerror="this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80'" /></figure>
+        <figure class="b3"><img loading="lazy" src="images/product-nachos.jpg" alt="The future is vegan neon sign on the wall inside The Bayside Cafe"
+          onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80'" /></figure>
+      </div>
+      <div class="float-card rating">
+        <span class="num">4.7</span>
+        <span class="meta"><span class="stars">★★★★★</span><small>500+ Google reviews</small></span>
+      </div>
+      <div class="float-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3c-3 3-3 8 0 12 3-4 3-9 0-12zM12 15v6" stroke-linecap="round"/></svg>
+        100% Plant-Based
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STATS ===================== -->
+<section class="stats-bar">
+  <svg class="octo-deco" width="86" height="93" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:50%;left:3%;transform:translateY(-50%) rotate(-22deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco" width="72" height="78" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:-10px;right:8%;transform:rotate(16deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <div class="container stats-grid">
+    <div class="stat-tile reveal"><div class="n">4.7★</div><div class="l">Google Rating</div></div>
+    <div class="stat-tile reveal d1"><div class="n">500+</div><div class="l">Google Reviews</div></div>
+    <div class="stat-tile reveal d2"><div class="n">5+</div><div class="l">Years Open</div></div>
+    <div class="stat-tile reveal d3"><div class="n">100%</div><div class="l">Plant-Based</div></div>
+  </div>
+</section>
+
+<!-- ===================== TICKER ===================== -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack">
+    <span>100% Vegan</span><span>Hand-Breaded Chick'n</span><span>Beyond Burgers</span><span>Loaded Nachitos</span><span>Craft Vegan Beer</span><span>2913 W Marine View Dr</span>
+  </div>
+</div>
+
+<!-- ===================== FAVORITES ===================== -->
+<section class="section" id="favorites">
+  <svg class="octo-deco" width="150" height="163" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:30px;right:-45px;transform:rotate(20deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco" width="88" height="95" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:12%;left:2%;transform:rotate(-25deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco" width="64" height="69" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:46%;right:14%;transform:rotate(6deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <div class="container">
+    <div class="head reveal">
+      <span class="eyebrow">Crowd Pleasers</span>
+      <h2>The ones people <span class="accent-i">come back for.</span></h2>
+      <p>Everything on this list is fully plant-based. Nobody misses the meat, we promise.</p>
+    </div>
+    <div class="fav-grid">
+      <article class="card featured reveal">
+        <div class="card-img">
+          <img loading="lazy" src="images/product-bomber.jpg" alt="The Classic vegan burger served with tater tots"
+            onerror="this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80'" />
+        </div>
+        <span class="badge">Most Loved</span>
+        <div class="card-body">
+          <div class="row"><h3>The Classic</h3><span class="price">$13</span></div>
+          <p>Lettuce, tomato, Chao cheese, onions, pickles and mayo. The one that never leaves the menu.</p>
+        </div>
+      </article>
+      <article class="card reveal d1">
+        <div class="card-img">
+          <img loading="lazy" src="images/product-chickun.jpg" alt="Crispy hand-breaded vegan chick'n sandwich with curly fries"
+            onerror="this.src='https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=800&q=80'" />
+        </div>
+        <span class="badge sage">Fan Favorite</span>
+        <div class="card-body">
+          <div class="row"><h3>Chicken Ghost Sandwich</h3><span class="price">$16</span></div>
+          <p>Crispy chickun, spicy aioli, tomatoes, onions, lettuce, pickles and nacho cheese sauce.</p>
+        </div>
+      </article>
+      <article class="card reveal d2">
+        <div class="card-img">
+          <img loading="lazy" src="images/menu-feature.jpg" alt="Loaded vegan Nachitos with jalapenos, beans and nacho cheese"
+            onerror="this.src='https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&q=80'" />
+        </div>
+        <span class="badge pink">Table Starter</span>
+        <div class="card-body">
+          <div class="row"><h3>Nachitos</h3><span class="price">$13</span></div>
+          <p>Nacho cheese sauce, meatless crumbles, jalapeños, onions, tomatoes and black beans.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== MENU ===================== -->
+<section class="section" id="menu" style="background:var(--paper-2)">
+  <svg class="octo-deco" width="140" height="152" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:8%;left:-40px;transform:rotate(-20deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco" width="66" height="72" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:4%;right:5%;transform:rotate(15deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <div class="container">
+    <div class="head reveal">
+      <span class="eyebrow">The Menu</span>
+      <h2>Everything's <span class="accent-i">vegan.</span> Everything's good.</h2>
+      <p>Pick a category. Honest prices, generous portions, zero animal products.</p>
+    </div>
+    <div class="menu-wrap">
+      <aside class="menu-side reveal">
+        <div class="menu-photo">
+          <img loading="lazy" src="images/interior.jpg" alt="A crispy fried sandwich plated with curly fries and dipping sauces, shot from above"
+            onerror="this.src='https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=700&q=80'" />
+          <span class="tag">Served with curly fries, straight-cut or tots</span>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Menu categories">
+          <button class="tab" data-panel="burgers" role="tab" id="tab-burgers" aria-selected="true" aria-controls="burgers">Bayside Burgers <span class="arr">→</span></button>
+          <button class="tab" data-panel="sliders" role="tab" id="tab-sliders" aria-selected="false" aria-controls="sliders" tabindex="-1">Chickun Sliders <span class="arr">→</span></button>
+          <button class="tab" data-panel="sandwiches" role="tab" id="tab-sandwiches" aria-selected="false" aria-controls="sandwiches" tabindex="-1">Sandwiches <span class="arr">→</span></button>
+          <button class="tab" data-panel="dawgs" role="tab" id="tab-dawgs" aria-selected="false" aria-controls="dawgs" tabindex="-1">Hot Dawgs <span class="arr">→</span></button>
+          <button class="tab" data-panel="apps" role="tab" id="tab-apps" aria-selected="false" aria-controls="apps" tabindex="-1">Appetizers <span class="arr">→</span></button>
+          <button class="tab" data-panel="kids" role="tab" id="tab-kids" aria-selected="false" aria-controls="kids" tabindex="-1">Kids Menu <span class="arr">→</span></button>
+        </div>
+      </aside>
+      <!-- EDIT (2026-07-15): full menu replaced with the live public Uber Eats listing for
+           The Bayside (ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ), supplied directly
+           in-conversation since the listing itself sits behind Uber's bot-check and can't be
+           fetched automatically. Items/prices reflect that listing as of this date — menus like
+           this one shift, so reconfirm against Uber Eats (or the physical menu) before launch. -->
+      <div class="menu-panels reveal d1">
+        <div class="panel active" id="burgers" role="tabpanel" aria-labelledby="tab-burgers">
+          <div class="m-item"><div><h4>The Classic</h4><p>Lettuce, tomato, Chao cheese, onions, pickles and mayo. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$13</span></div>
+          <div class="m-item"><div><h4>Scorpion Burger</h4><p>Chao cheese, sriracha aioli, jalapeños, onions, nacho cheese and salsa. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$16</span></div>
+          <div class="m-item"><div><h4>Bacon Burger</h4><p>Vegan bacon, grilled mushrooms, Chao cheese, onions, mayo and guacamole. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$16</span></div>
+          <div class="m-item"><div><h4>The Western Burger</h4><p>BBQ sauce, cheddar and mayo, topped with onion rings. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$14</span></div>
+          <div class="m-item"><div><h4>Good Catch Fish Burger</h4><p>Good Catch fish patty, fried pickles, house-made tartar, mayo, cheddar cheese and lettuce. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$14</span></div>
+        </div>
+        <div class="panel" id="sliders" role="tabpanel" aria-labelledby="tab-sliders" hidden>
+          <div class="m-item"><div><h4>Bacun Swiss Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Melted Swiss, bacon, mayo and guacamole. Comes with two sliders and a choice of tots, fries or curly fries.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Buffalo Ranch Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Buffalo-tossed patty, lettuce, tomato and ranch. Comes with two sliders and a choice of tots, fries or curly fries.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Classic Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Lettuce, tomato, pickle, onion and mayo. Comes with two sliders and a choice of tots, fries or curly fries.</p></div><span class="price">$17</span></div>
+        </div>
+        <div class="panel" id="sandwiches" role="tabpanel" aria-labelledby="tab-sandwiches" hidden>
+          <div class="m-item"><div><h4>Breakfast Sandwich</h4><p>Hash brown, Just Egg, cheddar cheese, mayo and Impossible sausage.</p></div><span class="price">$16</span></div>
+          <div class="m-item"><div><h4>Chicken Burger</h4><p>Crispy chickun, ranch Buffalo sauce, tomato, pickles, onions, mayo and lettuce.</p></div><span class="price">$16</span></div>
+          <div class="m-item"><div><h4>Chicken Ghost Sandwich</h4><p>Crispy chickun, spicy aioli, tomatoes, onions, lettuce, pickles and nacho cheese sauce.</p></div><span class="price">$16</span></div>
+        </div>
+        <div class="panel" id="dawgs" role="tabpanel" aria-labelledby="tab-dawgs" hidden>
+          <div class="m-item"><div><h4>The Sauerkraut Dawg</h4><p>Beyond Brat, sauerkraut, spicy mustard and onions. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$15</span></div>
+          <div class="m-item"><div><h4>Classic Hot Dawg</h4><p>Field Roast hot dog, mustard, ketchup, pickle and onion.</p></div><span class="price">$13</span></div>
+        </div>
+        <div class="panel" id="apps" role="tabpanel" aria-labelledby="tab-apps" hidden>
+          <div class="m-item"><div><h4>Nachitos</h4><p>Nacho cheese sauce, meatless crumbles, jalapeños, onions, tomatoes and black beans.</p></div><span class="price">$13</span></div>
+          <div class="m-item"><div><h4>Buffalo Wingz <small style="font-weight:400;color:var(--muted)">(6 pcs)</small></h4><p>Deep-fried vegan drumsticks on a sugar cane stick, tossed in buffalo sauce, with a side of ranch.</p></div><span class="price">$16</span></div>
+          <div class="m-item"><div><h4>Bucket of Tots</h4><p>Crispy, bite-sized tots served in a bucket.</p></div><span class="price">$9</span></div>
+          <div class="m-item"><div><h4>Fries</h4><p>Crispy, golden sticks served hot.</p></div><span class="price">$9</span></div>
+          <div class="m-item"><div><h4>Fried Pickles</h4><p>Crunchy dill pickle slices, fried up as a starter.</p></div><span class="price">$9</span></div>
+          <div class="m-item"><div><h4>Fried Mushrooms</h4><p>Crisp fried mushrooms, perfect for snacking.</p></div><span class="price">$9</span></div>
+        </div>
+        <div class="panel" id="kids" role="tabpanel" aria-labelledby="tab-kids" hidden>
+          <div class="m-item"><div><h4>Kids Burger</h4><p>Served plain with cheese on a bun. Comes with a choice of tots or fries.</p></div><span class="price">$7</span></div>
+          <div class="m-item"><div><h4>Mini Chickun Sandwich</h4><p>Served plain, no sauces, on a bun. Comes with a choice of tots or fries.</p></div><span class="price">$7</span></div>
+          <div class="m-item"><div><h4>Hot Dog</h4><p>Served plain, no sauces, on a bun. Comes with a choice of tots or fries.</p></div><span class="price">$7</span></div>
+          <div class="m-item"><div><h4>Chickun Nugs</h4><p>Comes with a choice of tots or fries.</p></div><span class="price">$7</span></div>
+        </div>
+        <div class="menu-foot">
+          <div class="menu-foot-row">
+            <small>Menu and prices shift with the seasons. Ask about daily specials and what's pouring on tap.</small>
+            <div class="menu-foot-btns">
+              <a href="https://www.ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE4MDIlMjBIZXdpdHQlMjBBdmUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJjODlkOTBlMi0zMjYyLTcwNDAtYzZiZi0zZGFmOWRmZGExOGElMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ3Ljk3OTEwMjMlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIyLjIwNTU2NDIlN0Q%3D" data-order target="_blank" rel="noopener" class="btn btn-primary">Order Online</a>
+              <a href="tel:+14254180640" class="btn btn-ink">Call to Order</a>
+            </div>
+          </div>
+          <details class="customize">
+            <summary>Customize your order <span aria-hidden="true"></span></summary>
+            <div class="cbody">Every sauce and side here is already vegan, so there's nothing to swap out for a plant-based version. Most burgers, dawgs and sliders come with a choice of curly fries, straight-cut fries or tots — ask your server about swaps and current add-on pricing. <!-- EDIT: the prior "+$2 onion rings" figure quoted here wasn't present in the current Uber Eats listing, so it's been dropped rather than carried forward unverified. --></div>
+          </details>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ATMOSPHERE ===================== -->
+<section class="atmos">
+  <div class="bg">
+    <img loading="lazy" src="images/product-nachos.jpg" alt="The future is vegan neon sign on the wall inside The Bayside Cafe"
+      onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1600&q=80'" />
+  </div>
+  <svg class="octo-deco on-dark" width="130" height="141" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:8%;right:5%;transform:rotate(-15deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#e8d5c0"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#c9a07a" opacity="0.5"/>
+    <circle cx="46" cy="48" r="5" fill="#3a1f0d"/><circle cx="74" cy="48" r="5" fill="#3a1f0d"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#c9922a" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco on-dark" width="78" height="85" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:10%;left:4%;transform:rotate(24deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#e8d5c0"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#c9a07a" opacity="0.5"/>
+    <circle cx="46" cy="48" r="5" fill="#3a1f0d"/><circle cx="74" cy="48" r="5" fill="#3a1f0d"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#c9922a" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <div class="container">
+    <div class="atmos-box reveal">
+      <span class="eyebrow on-dark">The Vibe</span>
+      <h2>Part diner, part lounge, <span class="accent-t">all heart.</span></h2>
+      <p>Cozy booths, punk art on the walls, cold vegan beer and a neon glow. It's the kind of room where you settle in and lose track of time. Vegan or just curious, you belong here.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== REVIEWS ===================== -->
+<section class="section reviews" id="reviews">
+  <svg class="octo-deco" width="80" height="87" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:10%;right:6%;transform:rotate(-17deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco" width="60" height="65" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:8%;left:3%;transform:rotate(13deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <div class="container">
+    <div class="head reveal" style="margin-bottom:1.6rem">
+      <span class="eyebrow">Kind Words</span>
+      <h2>Everett keeps <span class="accent-i">coming back.</span></h2>
+    </div>
+    <div class="rating-pill reveal d1">
+      <span class="big">4.7</span>
+      <span class="meta"><span class="stars">★★★★★</span><small>500+ Google reviews · 5.0★ on HappyCow (97 reviews)</small></span>
+    </div>
+  </div>
+  <!-- EDIT — these five are real, verbatim reviews pulled directly from the cafe's public
+       HappyCow listing (happycow.net/reviews/the-bayside-cafe-everett-211326) during the research
+       pass on 2026-07-15, attributed by the exact username HappyCow displays. The prior version of
+       this section used six invented quotes with fabricated names/platforms — replaced outright,
+       per the rule against ever inventing a review. Pull a couple more from Yelp/Google directly
+       before launch if you want a longer rail; Yelp's page returned a 403 to automated fetches
+       during this pass, so it wasn't possible to grab attributed quotes from it here. -->
+  <div class="marquee reveal d2" id="reviewMarquee">
+    <div class="marquee-track" id="reviewTrack">
+      <div class="review-card"><div class="quote">&ldquo;</div><div class="stars">★★★★★</div><p>This is one of my favorite restaurants ever. The food is absolutely amazing - the chickn sandwiches are made in house and are so crispy and good.</p><div class="who"><div class="avatar">HP</div><div><b>hannapeterson</b><small>HappyCow review</small></div></div></div>
+      <div class="review-card"><div class="quote">&ldquo;</div><div class="stars">★★★★★</div><p>This place takes 'junk food' to a new and wonderful level. Taking mostly ready made options, they add their own twist with sauces and ingredient combinations.</p><div class="who"><div class="avatar">II</div><div><b>in2insight</b><small>HappyCow review</small></div></div></div>
+      <div class="review-card"><div class="quote">&ldquo;</div><div class="stars">★★★★★</div><p>Good hearty food with great fried potatoes or mushrooms or pickles, nice salads and now, a bunch of vegan baked goods as well!</p><div class="who"><div class="avatar">JC</div><div><b>JillCampbell</b><small>HappyCow review</small></div></div></div>
+      <div class="review-card"><div class="quote">&ldquo;</div><div class="stars">★★★★★</div><p>I love an all vegan place. The owner is hella cool and makes amazing food. Will be back if I'm in the area.</p><div class="who"><div class="avatar">JB</div><div><b>Johbbi</b><small>HappyCow review</small></div></div></div>
+      <div class="review-card"><div class="quote">&ldquo;</div><div class="stars">★★★★★</div><p>Highly recommend the bacun burger. They've managed to perfect vegan bacon, and it goes so well with their blue cheeze.</p><div class="who"><div class="avatar">PN</div><div><b>PsianaNachtara</b><small>HappyCow review</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== STORY ===================== -->
+<section class="section" id="story">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-photo reveal">
+        <img loading="lazy" src="images/owners.jpg" alt="Owners Jasper and Ryan smiling inside The Bayside Cafe under the vegan food neon sign"
+          onerror="this.src='https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80'" />
+        <div class="since"><span><b>2020</b><small>Since</small></span></div>
+      </div>
+      <div class="reveal d1">
+        <span class="eyebrow">Our Story</span>
+        <p class="pull">"We wanted to prove vegan food could be the comfort food you crave, not the thing you settle for."</p>
+        <p class="body">Partners <b>Jasper and Ryan</b> opened The Bayside in August 2020, right in the thick of it, starting from a tiny space on Hewitt Avenue. Word got out fast, so they moved to a bigger space, kept the old dragon murals on the walls, and made the place their own. Today it's a full vegan diner and lounge where the burgers stack high and the door's open to everyone.</p>
+        <div class="values">
+          <div class="value">
+            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3c-3 3-3 8 0 12 3-4 3-9 0-12zM12 15v6"/></svg></div>
+            <div><h4>100% Plant-Based</h4><p>Every item on the menu is fully vegan. No exceptions, no small print.</p></div>
+          </div>
+          <div class="value">
+            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7-4.4-9-8.5C1.5 9 3.5 6 6.5 6 8.5 6 12 8 12 8s3.5-2 5.5-2c3 0 5 3 3.5 6.5C19 16.6 12 21 12 21z"/></svg></div>
+            <div><h4>Made From Scratch</h4><p>Hand-breaded chick'n, house sauces and a nacho cheese we're a little too proud of.</p></div>
+          </div>
+          <div class="value">
+            <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 20c0-3.3 3.6-6 8-6s8 2.7 8 6"/></svg></div>
+            <div><h4>Everyone Welcome</h4><p>Vegan, curious or just hungry. You'll leave full and in a good mood.</p></div>
+          </div>
+        </div>
+        <div class="story-btns">
+          <a href="https://www.ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ?srsltid=AfmBOopAVehnK16t3wyXr_lgHHjneiCVgSQOtmzVtaknQ2vceMsObWMx" data-order target="_blank" rel="noopener" class="btn btn-primary">Order Online</a>
+          <a href="tel:+14254180640" class="btn btn-ink">Call Us Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== VISIT ===================== -->
+<section class="section" id="visit" style="background:var(--paper-2)">
+  <svg class="octo-deco" width="112" height="122" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:4%;left:-35px;transform:rotate(17deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco" width="80" height="87" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:6%;right:3%;transform:rotate(-14deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco" width="58" height="63" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:52%;left:8%;transform:rotate(-24deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
+    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <div class="container">
+    <div class="head reveal">
+      <span class="eyebrow">Visit Us</span>
+      <h2>Come <span class="accent-i">hungry.</span></h2>
+      <p>On West Marine View Drive in Everett, open seven days a week. Look for the black building with the octopus signs.</p>
+    </div>
+    <div class="visit-grid">
+      <div class="hours-card reveal">
+        <div class="hours-head">
+          <h3>Hours</h3>
+          <span class="status-badge" id="hoursBadge">—</span>
+        </div>
+        <div id="hoursList"></div>
+        <div class="closed-msg" id="closedMsg" style="display:none"></div>
+        <div class="amenities">
+          <span class="chip">🌱 100% Vegan</span>
+          <span class="chip">🍺 Vegan Beer</span>
+          <span class="chip">🅿️ Street Parking</span>
+          <span class="chip">🥡 Takeout</span>
+          <span class="chip">♿ Accessible</span>
+        </div>
+      </div>
+      <div class="visit-right reveal d1">
+        <div class="find-photo">
+          <img loading="lazy" src="images/gallery-1.jpg" alt="Orange wall covered edge to edge in framed punk and rock art inside The Bayside Cafe's dining room"
+            onerror="this.src='https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80'" />
+          <span class="tag">🐙 The vibe from the second you walk in</span>
+        </div>
+        <div class="map-embed">
+          <iframe title="Map to The Bayside Cafe" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=The+Bayside+Cafe+2913+W+Marine+View+Dr+Everett+WA&output=embed"></iframe>
+        </div>
+        <div class="addr-card">
+          <h4>The Bayside Cafe</h4>
+          <p>2913 W Marine View Dr, Everett, WA 98201<br>(425) 418-0640</p>
+          <div class="acts">
+            <a href="https://www.google.com/maps/dir/?api=1&destination=The+Bayside+Cafe+2913+W+Marine+View+Dr+Everett+WA&destination_place_id=ChIJe2BioNSrmlQRik77LVaMgXY" target="_blank" rel="noopener" class="btn btn-gold">Get Directions</a>
+            <a href="tel:+14254180640" class="btn btn-ghost">Call Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== COMMUNITY CTA ===================== -->
+<section class="section cta-dark">
+  <svg class="octo-deco on-dark" width="126" height="137" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:6%;left:-30px;transform:rotate(-16deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#e8d5c0"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#c9a07a" opacity="0.5"/>
+    <circle cx="46" cy="48" r="5" fill="#3a1f0d"/><circle cx="74" cy="48" r="5" fill="#3a1f0d"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#c9922a" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco on-dark" width="86" height="93" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:8%;right:5%;transform:rotate(22deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#e8d5c0"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#c9a07a" opacity="0.5"/>
+    <circle cx="46" cy="48" r="5" fill="#3a1f0d"/><circle cx="74" cy="48" r="5" fill="#3a1f0d"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#c9922a" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco on-dark" width="60" height="65" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:52%;right:26%;transform:rotate(-8deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#e8d5c0"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#c9a07a" opacity="0.5"/>
+    <circle cx="46" cy="48" r="5" fill="#3a1f0d"/><circle cx="74" cy="48" r="5" fill="#3a1f0d"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#c9922a" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <div class="container">
+    <span class="eyebrow on-dark" style="justify-content:center">Pull Up a Booth</span>
+    <h2>Everett's table for <span class="accent-t">everyone.</span></h2>
+    <p>Been vegan for years or just want a really good burger? Either way, there's a seat and a stacked plate waiting for you.</p>
+    <div class="cta-acts">
+      <a href="https://www.google.com/maps/dir/?api=1&destination=The+Bayside+Cafe+2913+W+Marine+View+Dr+Everett+WA&destination_place_id=ChIJe2BioNSrmlQRik77LVaMgXY" target="_blank" rel="noopener" class="btn btn-gold">Get Directions</a>
+      <a href="tel:+14254180640" class="btn btn-ghost">Call 425-418-0640</a>
+    </div>
+    <div class="socials">
+      <a href="https://www.facebook.com/thebaysidecafeeverett/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.8.3-1.5 1.5-1.5H17V.2C16.6.1 15.5 0 14.4 0 11.9 0 10 1.5 10 4.3V6H7v3h3v9h4V9z"/></svg></a>
+      <a href="https://www.instagram.com/the_bayside_cafe/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.1.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.1-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.1-.4-.3-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.1 1-.3 2.2-.4C8.4 2.2 8.8 2.2 12 2.2zM12 6.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zm0 9a3.5 3.5 0 110-7 3.5 3.5 0 010 7zm5.8-9.7a1.3 1.3 0 11-2.6 0 1.3 1.3 0 012.6 0z"/></svg></a>
+      <a href="https://www.yelp.com/biz/bayside-cafe-everett" target="_blank" rel="noopener" aria-label="Yelp"><svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 13.2l-4.3 1.4c-.6.2-1.2-.4-1-1 .4-1.6 1.5-5.7 2-6.9.3-.7 1.2-.8 1.7-.2 1 1.2 2.8 3.7 3.3 5.3.2.7-.3 1.4-1 1.4zm1.9 2.2c.6-.4 1.4-.1 1.6.6.4 1.4 1.2 4.6 1.2 6 0 .8-.9 1.2-1.5.7-1.1-.9-3.4-3-4.2-4.4-.4-.6.1-1.4.8-1.4l2.1.1v-1.6zm3.9-4.6c-.2-.7.3-1.4 1-1.4l4.4-.1c.7 0 1.1.7.8 1.3-.6 1.4-2.2 4.7-3.3 5.7-.5.5-1.4.2-1.5-.5l-1.4-5zm-1.8-1.4c-.6.3-1.4 0-1.5-.7L10.6 3c-.1-.8.7-1.4 1.4-1 1.3.8 4 2.7 4.9 4 .4.6-.1 1.4-.8 1.4l-3.6 2z"/></svg></a>
+    </div>
+    <div class="perks"><span>100% Vegan</span><span>Open 7 Days</span><span>Takeout Ready</span><span>4.7★ on Google</span></div>
+  </div>
+</section>
+</main>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <svg class="octo-deco on-dark" width="90" height="98" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:-10px;right:-25px;transform:rotate(18deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#e8d5c0"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#c9a07a" opacity="0.5"/>
+    <circle cx="46" cy="48" r="5" fill="#3a1f0d"/><circle cx="74" cy="48" r="5" fill="#3a1f0d"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#c9922a" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco on-dark" width="64" height="69" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:10%;left:2%;transform:rotate(-13deg)">
+    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#e8d5c0"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#c9a07a" opacity="0.5"/>
+    <circle cx="46" cy="48" r="5" fill="#3a1f0d"/><circle cx="74" cy="48" r="5" fill="#3a1f0d"/>
+    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#c9922a" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#c9922a" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
+    <path d="M28 70 C18 76 12 86 4 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 70 C102 76 108 86 116 90" stroke="#c9922a" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand">
+          <svg class="mark" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+            <polygon points="31,3 69,3 97,31 97,69 69,97 31,97 3,69 3,31" stroke="currentColor" stroke-width="3.2"/>
+            <path d="M35 45c0-16 30-16 30 0 0 7-6 11-15 11s-15-4-15-11Z" stroke="currentColor" stroke-width="3.2" stroke-linejoin="round"/>
+            <circle cx="44" cy="43" r="2.5" fill="currentColor"/><circle cx="56" cy="43" r="2.5" fill="currentColor"/>
+            <g stroke="currentColor" stroke-width="3.2" stroke-linecap="round"><path d="M37 54c-5 6-7 13-13 15-4 1-5-3-2-5"/><path d="M44 56c-3 7-4 13-9 17"/><path d="M50 57v18"/><path d="M56 56c3 7 4 13 9 17"/><path d="M63 54c5 6 7 13 13 15 4 1 5-3 2-5"/></g>
+          </svg>
+          <b>The Bayside</b>
+        </div>
+        <p>Everett's 100% vegan diner &amp; lounge. Plant-based comfort food since 2020.</p>
+        <div class="foot-socials">
+          <a href="https://www.facebook.com/thebaysidecafeeverett/" target="_blank" rel="noopener" aria-label="Facebook"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3l.5-3H14V4.5c0-.8.3-1.5 1.5-1.5H17V.2C16.6.1 15.5 0 14.4 0 11.9 0 10 1.5 10 4.3V6H7v3h3v9h4V9z"/></svg></a>
+          <a href="https://www.instagram.com/the_bayside_cafe/" target="_blank" rel="noopener" aria-label="Instagram"><svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 1.8.3 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.1.4.3 1 .4 2.2.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.1-1 .3-2.2.4-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-1.8-.3-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.1-.4-.3-1-.4-2.2-.1-1.3-.1-1.7-.1-4.9s0-3.6.1-4.9c.1-1.2.3-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.1 1-.3 2.2-.4 1.3-.1 1.7-.1 4.9-.1zM12 6.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zm0 9a3.5 3.5 0 110-7 3.5 3.5 0 010 7zm5.8-9.7a1.3 1.3 0 11-2.6 0 1.3 1.3 0 012.6 0z"/></svg></a>
+        </div>
+      </div>
+      <div class="foot-col">
+        <h5>Quick Links</h5>
+        <ul>
+          <li><a href="#favorites">Favorites</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#visit">Visit Us</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Visit Us</h5>
+        <p>
+          2913 W Marine View Dr<br>Everett, WA 98201<br>
+          <a href="tel:+14254180640">(425) 418-0640</a><br><br>
+          Mon–Wed 11a–7p<br>Thu–Sat 11a–10p · Sun 11a–3p
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="copybar">© <span id="year"></span> The Bayside Cafe · Everett, WA · 100% Vegan Diner &amp; Lounge</div>
+</footer>
+
+<!-- ===================== FLOATERS (desktop/tablet) ===================== -->
+<div class="floaters" id="floaters">
+  <a href="tel:+14254180640" class="fab call" aria-label="Call The Bayside Cafe"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1z"/></svg></a>
+  <a href="https://www.ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE4MDIlMjBIZXdpdHQlMjBBdmUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJjODlkOTBlMi0zMjYyLTcwNDAtYzZiZi0zZGFmOWRmZGExOGElMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ3Ljk3OTEwMjMlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIyLjIwNTU2NDIlN0Q%3D" data-order target="_blank" rel="noopener" class="fab order" aria-label="Order online from The Bayside Cafe"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4V2h10v2h3v2l-1 14a2 2 0 01-2 2H7a2 2 0 01-2-2L4 6V4zM9 8v10M15 8v10"/></svg></a>
+</div>
+<button class="scrolltop" id="scrolltop" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 8l6 6H6z"/></svg></button>
+
+<!-- ===================== STICKY MOBILE BOTTOM BAR (≤1180px) ===================== -->
+<div class="mobile-bar" role="toolbar" aria-label="Quick actions">
+  <a href="tel:+14254180640" class="btn btn-ink">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.2.4 2.4.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 013 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.4 0 .8-.3 1z"/></svg>
+    Call Now
+  </a>
+  <a href="https://www.ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE4MDIlMjBIZXdpdHQlMjBBdmUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJjODlkOTBlMi0zMjYyLTcwNDAtYzZiZi0zZGFmOWRmZGExOGElMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ3Ljk3OTEwMjMlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIyLjIwNTU2NDIlN0Q%3D" data-order target="_blank" rel="noopener" class="btn btn-primary">
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4V2h10v2h3v2l-1 14a2 2 0 01-2 2H7a2 2 0 01-2-2L4 6V4zM9 8v10M15 8v10"/></svg>
+    Order Online
+  </a>
+</div>
+
+<script>
+/* ============================================================
+   ONLINE ORDERING — change this ONE link to repoint every
+   "Order Online" button on the page (nav, hero, mobile menu,
+   menu section, floating button). Each button also has this
+   URL hardcoded as a no-JS fallback.
+   Prior link (joe.coffee):
+   https://joe.coffee/locations/wa/everett/the-bayside-cafe-everett/
+   ============================================================ */
+const ORDER_URL="https://www.ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ?srsltid=AfmBOopAVehnK16t3wyXr_lgHHjneiCVgSQOtmzVtaknQ2vceMsObWMx";
+document.querySelectorAll("[data-order]").forEach(a=>{a.href=ORDER_URL;});
+
+/* ============================================================
+   HOURS — [open, close] as 24h decimals. index 0 = Sunday.
+   Edit here to update the whole site's open/closed logic.
+   ============================================================ */
+/* EDIT: multiple secondary listings (Restaurantji, an aggregator search snippet) agree Mon-Wed
+   all close at 7pm; the prior 7:30pm Wednesday close in this file didn't match any source found
+   during the 2026-07-15 research pass, so it's been straightened to 7pm. Re-confirm against the
+   live Google listing before launch — hours are exactly the kind of fact that drifts. */
+const HOURS={0:[11,15],1:[11,19],2:[11,19],3:[11,19],4:[11,22],5:[11,22],6:[11,22]};
+const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const fmt=t=>{const h=Math.floor(t),m=Math.round((t-h)*60),ap=h>=12?"pm":"am";let hh=h%12;if(hh===0)hh=12;return m?`${hh}:${m.toString().padStart(2,"0")}${ap}`:`${hh}${ap}`;};
+
+/* EDIT (2026-07-15 browser QA): the open/closed logic previously read new Date().getDay()/
+   getHours(), which is the VISITOR's device clock/timezone, not Everett's. A visitor browsing
+   from a different timezone would see a status computed against the wrong clock entirely. This
+   reads the real time in the cafe's own timezone (America/Los_Angeles) no matter where the
+   visitor is. */
+const TIMEZONE="America/Los_Angeles";
+const pacificDayFmt=new Intl.DateTimeFormat("en-US",{timeZone:TIMEZONE,weekday:"short"});
+const pacificTimeFmt=new Intl.DateTimeFormat("en-US",{timeZone:TIMEZONE,hour:"numeric",minute:"numeric",hourCycle:"h23"});
+const WEEKDAY_ABBR=["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+function nowInPacific(){
+  const d=new Date();
+  const day=WEEKDAY_ABBR.indexOf(pacificDayFmt.format(d));
+  const parts=pacificTimeFmt.formatToParts(d).reduce((m,p)=>(m[p.type]=p.value,m),{});
+  let hour=parseInt(parts.hour,10);if(hour===24)hour=0;
+  const t=hour+parseInt(parts.minute,10)/60;
+  return{day,t};
+}
+
+function computeStatus(){
+  const{day,t}=nowInPacific(),today=HOURS[day];
+  let open=false,closesAt=null,nextDay=day,nextOpen=null;
+  if(today&&t>=today[0]&&t<today[1]){open=true;closesAt=today[1];}
+  if(!open){
+    for(let i=0;i<7;i++){const d=(day+i)%7,h=HOURS[d];if(!h)continue;
+      if(i===0&&t<h[0]){nextDay=d;nextOpen=h[0];break;}
+      if(i>0){nextDay=d;nextOpen=h[0];break;}}
+  }
+  return{open,closesAt,nextDay,nextOpen,day};
+}
+
+function applyStatus(){
+  const s=computeStatus();
+  const dot=document.getElementById("heroDot"),heroStatus=document.getElementById("heroStatus"),
+        announce=document.getElementById("announce"),badge=document.getElementById("hoursBadge"),
+        closedMsg=document.getElementById("closedMsg");
+  if(s.open){
+    dot.classList.add("open");
+    heroStatus.textContent=`Open now · closes ${fmt(s.closesAt)}`;
+    announce.innerHTML=`<b>We're open!</b> Serving until ${fmt(s.closesAt)} today<span class="sep">·</span>2913 W Marine View Dr`;
+    badge.textContent="Open Now";badge.className="status-badge open";
+    closedMsg.style.display="none";
+  }else{
+    dot.classList.remove("open");
+    const isToday=s.nextDay===nowInPacific().day;
+    const when=isToday?`today at ${fmt(s.nextOpen)}`:`${DAYS[s.nextDay]} at ${fmt(s.nextOpen)}`;
+    heroStatus.textContent=`Closed now · opens ${when}`;
+    announce.innerHTML=`Closed right now<span class="sep">·</span><b>Back ${when}</b><span class="sep">·</span>2913 W Marine View Dr`;
+    badge.textContent="Closed";badge.className="status-badge closed";
+    closedMsg.style.display="block";
+    closedMsg.textContent=`We're closed at the moment. Come back ${when} and we'll have the fryer hot.`;
+  }
+  const list=document.getElementById("hoursList");list.innerHTML="";
+  for(let i=1;i<=7;i++){
+    const d=i%7,h=HOURS[d],row=document.createElement("div");
+    row.className="hrow"+(d===s.day?" today":"");
+    row.innerHTML=`<span class="day">${DAYS[d]}</span><span class="time">${h?fmt(h[0])+" – "+fmt(h[1]):"Closed"}</span>`;
+    list.appendChild(row);
+  }
+}
+applyStatus();
+document.getElementById("year").textContent=new Date().getFullYear();
+
+/* nav + floaters + scrolltop + scroll progress */
+const nav=document.getElementById("nav"),floaters=document.getElementById("floaters"),
+      scrolltop=document.getElementById("scrolltop"),progress=document.getElementById("progress");
+function onScroll(){
+  const y=window.scrollY;
+  nav.classList.toggle("scrolled",y>40);
+  floaters.classList.toggle("show",y>400);
+  scrolltop.classList.toggle("show",y>600);
+  const h=document.documentElement;
+  const max=h.scrollHeight-h.clientHeight;
+  progress.style.width=(max>0?(y/max)*100:0)+"%";
+}
+window.addEventListener("scroll",onScroll,{passive:true});onScroll();
+scrolltop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+
+/* mobile overlay — open/close, Escape to close, and focus handling.
+   EDIT (2026-07-15 browser QA): confirmed via Playwright that Escape previously did nothing
+   and focus was never moved into or back out of the overlay — added both. */
+const overlay=document.getElementById("overlay"),hamburger=document.getElementById("hamburger");
+const overlayFocusable=()=>[...overlay.querySelectorAll("a,button")];
+function openMenu(){
+  overlay.classList.add("open");
+  hamburger.setAttribute("aria-expanded","true");
+  document.body.style.overflow="hidden";
+  overlayFocusable()[0]?.focus();
+}
+function closeMenu(){
+  overlay.classList.remove("open");
+  hamburger.setAttribute("aria-expanded","false");
+  document.body.style.overflow="";
+  hamburger.focus();
+}
+hamburger.addEventListener("click",()=>{overlay.classList.contains("open")?closeMenu():openMenu();});
+document.getElementById("overlayClose").addEventListener("click",closeMenu);
+overlay.querySelectorAll("a").forEach(a=>a.addEventListener("click",closeMenu));
+document.addEventListener("keydown",e=>{
+  if(e.key!=="Escape"||!overlay.classList.contains("open"))return;
+  closeMenu();
+});
+overlay.addEventListener("keydown",e=>{
+  if(e.key!=="Tab")return;
+  const f=overlayFocusable(),first=f[0],last=f[f.length-1];
+  if(e.shiftKey&&document.activeElement===first){e.preventDefault();last.focus();}
+  else if(!e.shiftKey&&document.activeElement===last){e.preventDefault();first.focus();}
+});
+
+/* menu tabs (accessible tablist) */
+const tabs=[...document.querySelectorAll('[role="tab"]')];
+function selectTab(tab){
+  tabs.forEach(t=>{
+    const on=t===tab;
+    t.setAttribute("aria-selected",on);
+    t.tabIndex=on?0:-1;
+    document.getElementById(t.dataset.panel).hidden=!on;
+    document.getElementById(t.dataset.panel).classList.toggle("active",on);
+  });
+  tab.focus();
+}
+tabs.forEach((tab,i)=>{
+  tab.addEventListener("click",()=>selectTab(tab));
+  tab.addEventListener("keydown",e=>{
+    if(e.key==="ArrowRight")selectTab(tabs[(i+1)%tabs.length]);
+    if(e.key==="ArrowLeft")selectTab(tabs[(i-1+tabs.length)%tabs.length]);
+  });
+});
+
+/* reveal on scroll */
+const reduceMotion=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const io=new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}});},{threshold:.12,rootMargin:"0px 0px -40px 0px"});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
+
+/* EDIT (2026-07-15 browser QA): the stats band had no count-up at all — just static numbers
+   that fade in with the rest of the .reveal content. Added a real count-up, triggered once. */
+(function(){
+  const targets=[...document.querySelectorAll(".stat-tile .n")].map(el=>{
+    const m=el.textContent.match(/^([\d.]+)(.*)$/);
+    return m?{el,value:parseFloat(m[1]),decimals:(m[1].split(".")[1]||"").length,suffix:m[2]}:null;
+  }).filter(Boolean);
+  const grid=document.querySelector(".stats-grid");
+  if(!targets.length||!grid)return;
+  function countUp(){
+    targets.forEach(t=>{
+      if(reduceMotion){t.el.textContent=t.value.toFixed(t.decimals)+t.suffix;return;}
+      const start=performance.now(),dur=1100;
+      (function step(now){
+        const p=Math.min((now-start)/dur,1),eased=1-Math.pow(1-p,3);
+        t.el.textContent=(t.value*eased).toFixed(t.decimals)+t.suffix;
+        if(p<1)requestAnimationFrame(step);
+      })(start);
+    });
+  }
+  const statsIo=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){countUp();statsIo.disconnect();}});},{threshold:.4});
+  statsIo.observe(grid);
+})();
+
+/* hero headline: word-by-word reveal */
+(function(){
+  const el=document.getElementById("heroHeadline");
+  if(reduceMotion){return;}
+  const html=el.innerHTML;
+  const wrapped=html.split(/(<br>|<span[^>]*>|<\/span>)/).reduce((acc,chunk)=>{
+    if(/^(<br>|<span|<\/span>)/.test(chunk)){acc.raw+=chunk;return acc;}
+    const words=chunk.split(" ").filter(w=>w.length);
+    words.forEach((w,i)=>{acc.raw+=`<span class="word" style="--i:${acc.count++}">${w}</span>${i<words.length-1?" ":""}`;});
+    return acc;
+  },{raw:"",count:0}).raw;
+  el.innerHTML=wrapped;
+})();
+
+/* hero visual: subtle mouse parallax, desktop only, respects reduced motion */
+(function(){
+  const visual=document.getElementById("heroVisual");
+  if(reduceMotion||window.matchMedia("(pointer: coarse)").matches)return;
+  const hero=document.querySelector(".hero");
+  hero.addEventListener("mousemove",e=>{
+    const r=hero.getBoundingClientRect();
+    const x=((e.clientX-r.left)/r.width-.5)*14;
+    const y=((e.clientY-r.top)/r.height-.5)*14;
+    visual.style.transform=`translate(${x}px, ${y}px)`;
+  });
+  hero.addEventListener("mouseleave",()=>{visual.style.transform="translate(0,0)";});
+})();
+
+/* ============================================================
+   SEAMLESS MARQUEE — clones content until it exceeds the
+   viewport width (not a fixed 50%), then animates by the exact
+   pixel width of one full content set so there's never a gap.
+   ============================================================ */
+function setupMarquee(track,{speed=70,pauseOnHover=true}={}){
+  if(!track)return;
+  const original=[...track.children];
+  if(!original.length)return;
+  const setWidth=()=>{
+    const gap=parseFloat(getComputedStyle(track).gap)||0;
+    return original.reduce((sum,el)=>sum+el.getBoundingClientRect().width+gap,0);
+  };
+  track.innerHTML="";
+  original.forEach(el=>track.appendChild(el));
+  let oneSetWidth=setWidth();
+  const viewport=track.parentElement.getBoundingClientRect().width;
+  while(track.getBoundingClientRect().width<viewport*2+oneSetWidth){
+    original.forEach(el=>track.appendChild(el.cloneNode(true)));
+  }
+  oneSetWidth=setWidth();
+  const styleId="mq-style-"+Math.random().toString(36).slice(2);
+  const style=document.createElement("style");
+  style.id=styleId;
+  style.textContent=`@keyframes ${styleId}{from{transform:translateX(0)}to{transform:translateX(-${oneSetWidth}px)}}`;
+  document.head.appendChild(style);
+  const duration=oneSetWidth/speed;
+  track.style.animation=`${styleId} ${duration}s linear infinite`;
+  if(reduceMotion){track.style.animation="none";return;}
+  if(pauseOnHover){
+    const wrap=track.parentElement;
+    wrap.addEventListener("mouseenter",()=>track.style.animationPlayState="paused");
+    wrap.addEventListener("mouseleave",()=>track.style.animationPlayState="running");
+  }
+}
+setupMarquee(document.getElementById("tickerTrack"),{speed:60,pauseOnHover:false});
+setupMarquee(document.getElementById("reviewTrack"),{speed:55});
+
+/* smooth anchor scroll with nav offset */
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener("click",e=>{
+    const id=a.getAttribute("href");if(id.length<2)return;
+    const el=document.querySelector(id);if(!el)return;
+    e.preventDefault();
+    const y=el.getBoundingClientRect().top+window.scrollY-(parseInt(getComputedStyle(document.documentElement).getPropertyValue("--nav-h"))+10);
+    window.scrollTo({top:y,behavior:reduceMotion?"auto":"smooth"});
+  });
+});
+</script>
+
+<!--
+============================================================
+ IMAGES  (/images/ — real photos of The Bayside Cafe)
+============================================================
+ NOTE (fixed): the filenames below don't all describe their own
+ contents (a few got crossed during a prior download pass). Listed
+ here is what each file ACTUALLY shows and where it's used now —
+ every <img> src on the page was repointed to match, so alt text
+ and captions are accurate again.
+
+ hero.jpg           → crispy chick'n sandwich + curly fries + beer, moody   [HappyCow]
+                       used: hero collage (large tile)
+ product-bomber.jpg → The Bomber burger + tater tots on a white plate      [HappyCow]
+                       used: hero collage, Favorites "The Bomber" card
+ product-chickun.jpg→ crispy chick'n sandwich + curly fries, bright        [HappyCow]
+                       used: Favorites "Chickun Ghost" card, bento gallery
+ product-nachos.jpg → ACTUALLY the "the future is VEGAN" neon sign         [HappyCow]
+                       used: hero collage, atmosphere banner, bento gallery
+ interior.jpg       → ACTUALLY a crispy filet sandwich + curly fries, top-down [HappyCow]
+                       used: menu section sidebar photo
+ menu-feature.jpg   → ACTUALLY loaded Nachitos                             [HappyCow]
+                       used: Favorites "Loaded Nachitos" card
+ owners.jpg         → owners Jasper & Ryan under the Vegan Food neon        [MyEverettNews, cropped]
+                       used: Story section
+ storefront.jpg     → the cafe's black building w/ octopus signs (sparse/empty frame) [MyEverettNews — prior Broadway space]
+                       used: bento gallery (small tile — the empty space reads fine there;
+                       moved out of the Visit section's single featured photo slot, which
+                       looked too bare for a "welcome" shot)
+ gallery-1.jpg      → orange wall covered edge-to-edge in punk/rock art     [HappyCow]
+                       used: Visit section featured "welcome" photo (promoted here —
+                       full-frame and lively, reads much warmer than the old storefront shot)
+ gallery-2.jpg      → ACTUALLY a solo Bomber burger + tots on a dark table  [HappyCow]
+                       used: bento gallery
+ gallery-3.jpg      → ACTUALLY friends splitting takeout boxes of chick'n sandwiches [HappyCow]
+                       used: bento gallery
+ gallery-4.jpg      → menu card w/ octopus logo + vegan beer + fries        [HappyCow]
+                       used: bento gallery
+
+ >> The octopus logo + octagon badge in the nav/footer is a clean
+    hand-built SVG modeled on the cafe's real octagonal signage.
+ >> Photos are real customer/press shots used as reference placeholders
+    (a few carry a faint "HappyCow" mark). For final publish, swap in
+    the cafe's own high-res photos — ideally a genuinely full, populated
+    exterior/entrance shot to replace storefront.jpg, and a real pretzel-
+    bun burger photo if you want that exact item pictured in the menu
+    sidebar (it currently shows a different real sandwich instead).
+
+ >> ADDRESS: confirmed current via Yelp + a Waze deep-link carrying Google's
+    place ID (both independently agree, 2026-07-15 research pass):
+    2913 W Marine View Dr, Everett, WA 98201 / (425) 418-0640.
+    The relocation history is real too — 1717 Hewitt Ave (2020 opening) →
+    3001 Broadway → 2913 W Marine View Dr (current, former China Doll
+    building). NOTE: owners.jpg + storefront.jpg were shot at the prior
+    Broadway space — swap in current Marine View photos before publishing.
+
+ >> RESOLVED during the 2026-07-15 research pass (browser/web-fetch tools):
+    - Yelp listing: https://www.yelp.com/biz/bayside-cafe-everett — now
+      wired into the socials row and JSON-LD "sameAs".
+    - Google Maps place ID: ChIJe2BioNSrmlQRik77LVaMgXY — now used for the
+      canonical Maps link and every "Get Directions" button.
+    - Rating/reviews were wrongly conflated (page previously showed one
+      "5.0 · 97+ reviews on Google & HappyCow" figure). Corrected and
+      separated: Google is ~4.7★ (reviewCount cited as 533 by one
+      secondary source, but ranged 333–634 across others depending on
+      snapshot date — RECONFIRM AGAINST THE LIVE GOOGLE LISTING BEFORE
+      LAUNCH). HappyCow's own listing was fetched directly and does show
+      5.0★ / 97 reviews — that figure is accurate but is HappyCow-only,
+      and is now labeled as such everywhere it appears.
+    - The six review-rail quotes were fabricated in a prior pass (invented
+      names, invented platforms). Replaced with five real, verbatim
+      quotes pulled directly from the cafe's HappyCow listing
+      (happycow.net/reviews/the-bayside-cafe-everett-211326), attributed
+      by the exact username HappyCow shows for each.
+    - MENU REPLACED on a later pass (also 2026-07-15): the full current menu
+      was pulled from the cafe's live Uber Eats listing
+      (ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ) — pasted
+      in-conversation since Uber Eats sits behind a bot-check wall that
+      blocked both a plain fetch and a real headless-browser fetch. The old
+      menu (Classic $10, The Bomber $14, Chickun Burger $11, Fishless Filet
+      $10, Chickun Ghost $11, German Brat $9, Everett Brat $10, Nachitos $7,
+      Jalapeno Popper Grilled Cheese $7, Bucket of Tots $5, onion rings +$2)
+      is gone from the live listing and has been fully replaced with six
+      real categories — Bayside Burgers, Chickun Sliders, Sandwiches, Hot
+      Dawgs, Appetizers, Kids Menu — 23 items total, all names/descriptions/
+      prices verbatim from that listing (only obvious typos normalized, e.g.
+      "strait cut"→"straight-cut", "chz"→"cheese"). The onion-rings add-on
+      price wasn't in the new listing, so it was dropped rather than carried
+      forward unverified. Two Favorites-section items were recaptioned to
+      match: "The Bomber" → "The Classic" ($13, closest live match to the
+      existing burger+tots photo) and "Loaded Nachitos" → "Nachitos" ($13).
+      "Chicken Ghost Sandwich" survived under Specialty Sandwiches at $16
+      (was $11). RECONFIRM AGAINST UBER EATS BEFORE LAUNCH — this menu
+      moves fast and wasn't independently cross-checked against a second
+      source the way the rest of this file's facts were.
+    - Wednesday's closing time was standardized from 7:30pm to 7pm to
+      match every other source found (all of Mon–Wed close together) —
+      still worth a final human check against the live listing.
+    - Owners confirmed by name via a 2022 local news profile: Jasper
+      Mosbacher and Ryan Housner.
+============================================================
+-->
