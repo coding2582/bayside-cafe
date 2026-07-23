@@ -58,8 +58,7 @@
   "address": { "@type": "PostalAddress", "streetAddress": "2913 W Marine View Dr", "addressLocality": "Everett", "addressRegion": "WA", "postalCode": "98201", "addressCountry": "US" },
   "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "533" },
   "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday"], "opens": "11:00", "closes": "19:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Thursday","Friday","Saturday"], "opens": "11:00", "closes": "22:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"], "opens": "11:00", "closes": "01:00" },
     { "@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "11:00", "closes": "15:00" }
   ],
   "sameAs": ["https://www.facebook.com/thebaysidecafeeverett/", "https://www.instagram.com/the_bayside_cafe/", "https://www.yelp.com/biz/bayside-cafe-everett", "https://www.google.com/maps/place/?q=place_id:ChIJe2BioNSrmlQRik77LVaMgXY"]
@@ -816,69 +815,68 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
         <div class="menu-photo">
           <img loading="lazy" src="images/interior.jpg" alt="A crispy fried sandwich plated with curly fries and dipping sauces, shot from above"
             onerror="this.src='https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=700&q=80'" />
-          <span class="tag">Served with curly fries, straight-cut or tots</span>
+          <span class="tag">Vegan comfort food, made to order</span>
         </div>
         <div class="tabs" role="tablist" aria-label="Menu categories">
-          <button class="tab" data-panel="burgers" role="tab" id="tab-burgers" aria-selected="true" aria-controls="burgers">Bayside Burgers <span class="arr">→</span></button>
-          <button class="tab" data-panel="sliders" role="tab" id="tab-sliders" aria-selected="false" aria-controls="sliders" tabindex="-1">Chickun Sliders <span class="arr">→</span></button>
+          <button class="tab" data-panel="starters" role="tab" id="tab-starters" aria-selected="true" aria-controls="starters">Starters <span class="arr">→</span></button>
+          <button class="tab" data-panel="breakfast" role="tab" id="tab-breakfast" aria-selected="false" aria-controls="breakfast" tabindex="-1">Breakfast <span class="arr">→</span></button>
+          <button class="tab" data-panel="burgers" role="tab" id="tab-burgers" aria-selected="false" aria-controls="burgers" tabindex="-1">Burgers <span class="arr">→</span></button>
           <button class="tab" data-panel="sandwiches" role="tab" id="tab-sandwiches" aria-selected="false" aria-controls="sandwiches" tabindex="-1">Sandwiches <span class="arr">→</span></button>
-          <button class="tab" data-panel="dawgs" role="tab" id="tab-dawgs" aria-selected="false" aria-controls="dawgs" tabindex="-1">Hot Dawgs <span class="arr">→</span></button>
-          <button class="tab" data-panel="apps" role="tab" id="tab-apps" aria-selected="false" aria-controls="apps" tabindex="-1">Appetizers <span class="arr">→</span></button>
-          <button class="tab" data-panel="kids" role="tab" id="tab-kids" aria-selected="false" aria-controls="kids" tabindex="-1">Kids Menu <span class="arr">→</span></button>
+          <button class="tab" data-panel="salads" role="tab" id="tab-salads" aria-selected="false" aria-controls="salads" tabindex="-1">Salads <span class="arr">→</span></button>
         </div>
       </aside>
-      <!-- EDIT (2026-07-15): full menu replaced with the live public Uber Eats listing for
-           The Bayside (ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ), supplied directly
-           in-conversation since the listing itself sits behind Uber's bot-check and can't be
-           fetched automatically. Items/prices reflect that listing as of this date — menus like
-           this one shift, so reconfirm against Uber Eats (or the physical menu) before launch. -->
+      <!-- EDIT (2026-07-23): full menu replaced with the current physical in-restaurant menu,
+           photographed and provided directly. This replaces the prior Uber Eats-sourced menu
+           (Bayside Burgers/Chickun Sliders/Sandwiches/Hot Dawgs/Appetizers/Kids Menu) with the
+           printed menu's own categories: Starters, Breakfast, Burgers, Sandwiches, Salads. Soft
+           Pretzels and Biscuits n' Gravy were on the printed menu but are being discontinued per
+           direct instruction, so they're omitted here. The Kids Menu, Chickun Sliders, and Hot
+           Dawgs categories aren't on the printed menu and have been dropped rather than kept
+           alongside it. Hours also changed on this pass — see the HOURS object and JSON-LD below. -->
       <div class="menu-panels reveal d1">
-        <div class="panel active" id="burgers" role="tabpanel" aria-labelledby="tab-burgers">
-          <div class="m-item"><div><h4>The Classic</h4><p>Lettuce, tomato, Chao cheese, onions, pickles, and mayo. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$13</span></div>
-          <div class="m-item"><div><h4>Scorpion Burger</h4><p>Chao cheese, sriracha aioli, jalapeños, onions, nacho cheese, and salsa. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$16</span></div>
-          <div class="m-item"><div><h4>Bacon Burger</h4><p>Vegan bacon, grilled mushrooms, Chao cheese, onions, mayo, and guacamole. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$16</span></div>
-          <div class="m-item"><div><h4>The Western Burger</h4><p>BBQ sauce, cheddar, and mayo, topped with onion rings. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$14</span></div>
-          <div class="m-item"><div><h4>Good Catch Fish Burger</h4><p>Good Catch fish patty, fried pickles, house-made tartar, mayo, cheddar cheese, and lettuce. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$14</span></div>
+        <div class="panel active" id="starters" role="tabpanel" aria-labelledby="tab-starters">
+          <div class="m-item"><div><h4>Nachitos</h4><p>Corn chips topped with a rich, melty nacho cheeze sauce, accompanied by chili, jalapeños, onions, and tomatoes.</p></div><span class="price">$14</span></div>
+          <div class="m-item"><div><h4>Fried Mushrooms</h4><p>Prepared to order, local gourmet mushrooms piled high and served with Bayside ranch.</p></div><span class="price">$14</span></div>
+          <div class="m-item"><div><h4>Fried Pickles</h4><p>Zesty pickle chips prepared in a house-made seasoned beer batter.</p></div><span class="price">$10</span></div>
+          <div class="m-item"><div><h4>Wingz</h4><p>Vegan seitan drumsticks, a delightful replacement for the real thing, featuring a signature sugarcane "bone" in each wing.</p></div><span class="price">$14</span></div>
         </div>
-        <div class="panel" id="sliders" role="tabpanel" aria-labelledby="tab-sliders" hidden>
-          <div class="m-item"><div><h4>Bacun Swiss Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Melted Swiss, bacon, mayo, and guacamole. Comes with two sliders and a choice of tots, fries, or curly fries.</p></div><span class="price">$17</span></div>
-          <div class="m-item"><div><h4>Buffalo Ranch Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Buffalo-tossed patty, lettuce, tomato, and ranch. Comes with two sliders and a choice of tots, fries, or curly fries.</p></div><span class="price">$17</span></div>
-          <div class="m-item"><div><h4>Classic Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Lettuce, tomato, pickle, onion, and mayo. Comes with two sliders and a choice of tots, fries, or curly fries.</p></div><span class="price">$17</span></div>
+        <div class="panel" id="breakfast" role="tabpanel" aria-labelledby="tab-breakfast" hidden>
+          <div class="m-item"><div><h4>Breakfast Sandwich</h4><p>Savory plant-based sausage, Just Egg, hash-brown patty, mayo, and cheddar cheeze on a toasted bun.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Breakfast Burrito</h4><p>Plant-based sausage, bacun, Just Egg, hash-brown, and melted cheddar cheeze.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Khloe Sandwich</h4><p>Crispy plant-based bacun, folded Just Egg, mayo, and Swiss cheeze on a toasted bun.</p></div><span class="price">$17</span></div>
+        </div>
+        <div class="panel" id="burgers" role="tabpanel" aria-labelledby="tab-burgers" hidden>
+          <div class="m-item"><div><h4>Western</h4><p>Cheddar cheeze, onion rings, BBQ sauce, and mayo. Add bacun for $2.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Bacun Mushroom</h4><p>Sauteed mushrooms, grilled onion, bacun, Swiss cheese, mayo, and guacamole. Add blue cheeze for $2.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Fetta</h4><p>Lettuce, tomato, pickle, onion, Swiss cheese, fetta, and mayo.</p></div><span class="price">$18</span></div>
+          <div class="m-item"><div><h4>Classic</h4><p>Lettuce, tomato, pickle, onion, cheddar cheeze, and mayo.</p></div><span class="price">$13</span></div>
+          <div class="m-item"><div><h4>Yo Egg</h4><p>Sunny side up Yo Egg, lettuce, tomato, pickle, onion, Swiss cheese, and mayo.</p></div><span class="price">$18</span></div>
+          <div class="m-item"><div><h4>Scorpion</h4><p>Sriracha aioli, nacho cheese, habanero ranch, jalapeños, onion, lettuce, and pickle.</p></div><span class="price">$18</span></div>
+          <div class="m-item"><div><h4>Big Moc'</h4><p>Two patties, special sauce, lettuce, cheese, pickles, and onions on a sesame seed bun.</p></div><span class="price">$20</span></div>
         </div>
         <div class="panel" id="sandwiches" role="tabpanel" aria-labelledby="tab-sandwiches" hidden>
-          <div class="m-item"><div><h4>Breakfast Sandwich</h4><p>Hash brown, Just Egg, cheddar cheese, mayo, and Impossible sausage.</p></div><span class="price">$16</span></div>
-          <div class="m-item"><div><h4>Chicken Burger</h4><p>Crispy chickun, ranch Buffalo sauce, tomato, pickles, onions, mayo, and lettuce.</p></div><span class="price">$16</span></div>
-          <div class="m-item"><div><h4>Chicken Ghost Sandwich</h4><p>Crispy chickun, spicy aioli, tomatoes, onions, lettuce, pickles, and nacho cheese sauce.</p></div><span class="price">$16</span></div>
+          <div class="m-item"><div><h4>Chickun Sandwich</h4><p>Crispy chickun patty, mayo, onion, lettuce, and pickle with ranch drizzle. Toss in buffalo sauce for a spicy twist.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Ghost Chickun Sandwich</h4><p>Crispy chickun patty, sriracha aioli, nacho cheeze, habanero ranch, onion, lettuce, and pickle.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Bacun Swiss Chickun</h4><p>Crispy chickun patty, melty Swiss cheese, bacun, guacamole, and mayo.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Fishless Sandwich</h4><p>Crispy fishless patty, lettuce, onion, melted cheddar cheese, and pickles with mayo and tartar.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Porkless Sandwich</h4><p>BBQ blackened soy curls, house-made coleslaw, pickle, and mayo.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Steak Sandwich</h4><p>A vegan steak served with fried onions, nestled in a toasted ciabatta bun with mixed greens.</p></div><span class="price">$20</span></div>
         </div>
-        <div class="panel" id="dawgs" role="tabpanel" aria-labelledby="tab-dawgs" hidden>
-          <div class="m-item"><div><h4>The Sauerkraut Dawg</h4><p>Beyond Brat, sauerkraut, spicy mustard, and onions. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$15</span></div>
-          <div class="m-item"><div><h4>Classic Hot Dawg</h4><p>Field Roast hot dog, mustard, ketchup, pickle, and onion.</p></div><span class="price">$13</span></div>
-        </div>
-        <div class="panel" id="apps" role="tabpanel" aria-labelledby="tab-apps" hidden>
-          <div class="m-item"><div><h4>Nachitos</h4><p>Nacho cheese sauce, meatless crumbles, jalapeños, onions, tomatoes, and black beans.</p></div><span class="price">$13</span></div>
-          <div class="m-item"><div><h4>Buffalo Wingz <small style="font-weight:400;color:var(--muted)">(6 pcs)</small></h4><p>Deep-fried vegan drumsticks on a sugar cane stick, tossed in buffalo sauce, with a side of ranch.</p></div><span class="price">$16</span></div>
-          <div class="m-item"><div><h4>Bucket of Tots</h4><p>Crispy, bite-sized tots served in a bucket.</p></div><span class="price">$9</span></div>
-          <div class="m-item"><div><h4>Fries</h4><p>Crispy, golden sticks served hot.</p></div><span class="price">$9</span></div>
-          <div class="m-item"><div><h4>Fried Pickles</h4><p>Crunchy dill pickle slices, fried up as a starter.</p></div><span class="price">$9</span></div>
-          <div class="m-item"><div><h4>Fried Mushrooms</h4><p>Crisp fried mushrooms, perfect for snacking.</p></div><span class="price">$9</span></div>
-        </div>
-        <div class="panel" id="kids" role="tabpanel" aria-labelledby="tab-kids" hidden>
-          <div class="m-item"><div><h4>Kids Burger</h4><p>Served plain with cheese on a bun. Comes with a choice of tots or fries.</p></div><span class="price">$7</span></div>
-          <div class="m-item"><div><h4>Mini Chickun Sandwich</h4><p>Served plain, no sauces, on a bun. Comes with a choice of tots or fries.</p></div><span class="price">$7</span></div>
-          <div class="m-item"><div><h4>Hot Dog</h4><p>Served plain, no sauces, on a bun. Comes with a choice of tots or fries.</p></div><span class="price">$7</span></div>
-          <div class="m-item"><div><h4>Chickun Nugs</h4><p>Comes with a choice of tots or fries.</p></div><span class="price">$7</span></div>
+        <div class="panel" id="salads" role="tabpanel" aria-labelledby="tab-salads" hidden>
+          <div class="m-item"><div><h4>Black and Blu</h4><p>A fresh blend of mixed greens, sprouts, onions, and tomato, topped with a grilled blackened vegan steak and blu cheese crumbles.</p></div><span class="price">$20</span></div>
+          <div class="m-item"><div><h4>Chickun Salad</h4><p>A fresh blend of mixed greens, sunflower sprouts, onions, and tomatoes, topped with a crispy or grilled chickun patty.</p></div><span class="price">$20</span></div>
         </div>
         <div class="menu-foot">
           <div class="menu-foot-row">
-            <small>Menu and prices shift with the seasons. Ask about daily specials and what's pouring on tap.</small>
+            <small>All burgers come standard with an Impossible patty. Swap in Field Roast, Beyond, or the house black bean patty for $2. Fries, tots, coleslaw, and side salad are available as extras.</small>
             <div class="menu-foot-btns">
               <a href="https://www.ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE4MDIlMjBIZXdpdHQlMjBBdmUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJjODlkOTBlMi0zMjYyLTcwNDAtYzZiZi0zZGFmOWRmZGExOGElMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ3Ljk3OTEwMjMlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIyLjIwNTU2NDIlN0Q%3D" data-order target="_blank" rel="noopener" class="btn btn-primary">Order Online</a>
               <a href="tel:+14254180640" class="btn btn-ink">Call to Order</a>
             </div>
           </div>
           <details class="customize">
-            <summary>Customize your order <span aria-hidden="true"></span></summary>
-            <div class="cbody">Every sauce and side here is already vegan, so there's nothing to swap out for a plant-based version. Most burgers, dawgs, and sliders come with a choice of curly fries, straight-cut fries, or tots. Ask your server about swaps and current add-on pricing. <!-- EDIT: the prior "+$2 onion rings" figure quoted here wasn't present in the current Uber Eats listing, so it's been dropped rather than carried forward unverified. --></div>
+            <summary>Sauces &amp; extras <span aria-hidden="true"></span></summary>
+            <div class="cbody">Every sauce and side here is already vegan, so there's nothing to swap out for a plant-based version. Sauces: ranch, habanero ranch, sriracha aioli, BBQ, sweet mustard, and mango habanero are $.50 each; blue cheeze is $2. Extras: coleslaw, side salad, side of fries, and side of tots are $8 each; a Yo Egg add-on is $7 and bacun is $5.</div>
           </details>
         </div>
       </div>
@@ -939,7 +937,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
         <span class="badge">Most Loved</span>
         <div class="card-body">
           <div class="row"><h3>The Classic</h3><span class="price">$13</span></div>
-          <p>Lettuce, tomato, Chao cheese, onions, pickles, and mayo. The one that never leaves the menu.</p>
+          <p>Lettuce, tomato, pickle, onion, cheddar cheeze, and mayo. The one that never leaves the menu.</p>
         </div>
       </article>
       <article class="card reveal d1">
@@ -949,8 +947,8 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
         </div>
         <span class="badge sage">Fan Favorite</span>
         <div class="card-body">
-          <div class="row"><h3>Chicken Ghost Sandwich</h3><span class="price">$16</span></div>
-          <p>Crispy chickun, spicy aioli, tomatoes, onions, lettuce, pickles, and nacho cheese sauce.</p>
+          <div class="row"><h3>Ghost Chickun Sandwich</h3><span class="price">$17</span></div>
+          <p>Crispy chickun patty, sriracha aioli, nacho cheeze, habanero ranch, onion, lettuce, and pickle.</p>
         </div>
       </article>
       <article class="card reveal d2">
@@ -1066,7 +1064,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
       <div class="reveal d1">
         <span class="eyebrow">Our Story</span>
         <p class="pull">"We wanted to prove vegan food could be the comfort food you crave, not the thing you settle for."</p>
-        <p class="body">Partners <b>Jasper and Ryan</b> opened The Bayside in August 2020, launching from a tiny space on Hewitt Avenue during a genuinely uncertain time. Word got out fast, so they moved into a larger space, kept the original dragon murals on the walls, and made it their own. Today it's a full vegan diner and lounge where the burgers stack high and the door's open to everyone.</p>
+        <p class="body"><b>Jasper and Ryan</b> opened The Bayside in August 2020, launching from a tiny space on Hewitt Avenue during a genuinely uncertain time. Word got out fast, so they moved into a larger space, kept the original dragon murals on the walls, and made it their own. Today it's a full vegan diner and lounge where the burgers stack high and the door's open to everyone.</p>
         <div class="values">
           <div class="value">
             <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3c-3 3-3 8 0 12 3-4 3-9 0-12zM12 15v6"/></svg></div>
@@ -1192,7 +1190,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
       </details>
       <details class="faq-item reveal">
         <summary>What are The Bayside Cafe's hours?<span aria-hidden="true"></span></summary>
-        <p>Monday–Wednesday 11am–7pm, Thursday–Saturday 11am–10pm, and Sunday 11am–3pm. Open seven days a week.</p>
+        <p>Monday–Saturday 11am–1am, and Sunday 11am–3pm. Open seven days a week.</p>
       </details>
       <details class="faq-item reveal">
         <summary>Do you offer takeout or delivery?<span aria-hidden="true"></span></summary>
@@ -1201,10 +1199,6 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
       <details class="faq-item reveal">
         <summary>Is there parking near The Bayside Cafe?<span aria-hidden="true"></span></summary>
         <p>Yes, street parking is available right outside on West Marine View Drive.</p>
-      </details>
-      <details class="faq-item reveal">
-        <summary>Do you have a kids menu?<span aria-hidden="true"></span></summary>
-        <p>Yes. The kids menu includes a plain burger, mini chick'n sandwich, hot dog, and chick'n nugs, each served with a choice of tots or fries.</p>
       </details>
       <details class="faq-item reveal">
         <summary>Do you serve alcohol?<span aria-hidden="true"></span></summary>
@@ -1225,10 +1219,9 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
   "mainEntity": [
     { "@type": "Question", "name": "Is The Bayside Cafe fully vegan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every item on the menu is 100% plant-based, from the burgers and hand-breaded chick'n to the nacho cheese sauce. No animal products, no exceptions." } },
     { "@type": "Question", "name": "Where is The Bayside Cafe located?", "acceptedAnswer": { "@type": "Answer", "text": "2913 W Marine View Dr, Everett, WA 98201. Look for the black building with the octopus signs on West Marine View Drive." } },
-    { "@type": "Question", "name": "What are The Bayside Cafe's hours?", "acceptedAnswer": { "@type": "Answer", "text": "Monday–Wednesday 11am–7pm, Thursday–Saturday 11am–10pm, and Sunday 11am–3pm. Open seven days a week." } },
+    { "@type": "Question", "name": "What are The Bayside Cafe's hours?", "acceptedAnswer": { "@type": "Answer", "text": "Monday–Saturday 11am–1am, and Sunday 11am–3pm. Open seven days a week." } },
     { "@type": "Question", "name": "Do you offer takeout or delivery?", "acceptedAnswer": { "@type": "Answer", "text": "Both. Call ahead for takeout, or order delivery through Uber Eats using the \"Order Online\" button on this page." } },
     { "@type": "Question", "name": "Is there parking near The Bayside Cafe?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, street parking is available right outside on West Marine View Drive." } },
-    { "@type": "Question", "name": "Do you have a kids menu?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The kids menu includes a plain burger, mini chick'n sandwich, hot dog, and chick'n nugs, each served with a choice of tots or fries." } },
     { "@type": "Question", "name": "Do you serve alcohol?", "acceptedAnswer": { "@type": "Answer", "text": "We do. Vegan beer is on tap alongside the food menu." } },
     { "@type": "Question", "name": "What makes The Bayside Cafe different from other vegan restaurants?", "acceptedAnswer": { "@type": "Answer", "text": "Everything is made from scratch, including the hand-breaded chick'n, house-made sauces, and a nacho cheese sauce we're especially proud of. It's comfort food first, vegan second, built for anyone who just wants a good burger." } }
   ]
@@ -1335,7 +1328,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
         <p>
           2913 W Marine View Dr<br>Everett, WA 98201<br>
           <a href="tel:+14254180640">(425) 418-0640</a><br><br>
-          Mon–Wed 11a–7p<br>Thu–Sat 11a–10p · Sun 11a–3p
+          Mon–Sat 11a–1a · Sun 11a–3p
         </p>
       </div>
     </div>
@@ -1378,13 +1371,14 @@ document.querySelectorAll("[data-order]").forEach(a=>{a.href=ORDER_URL;});
    HOURS — [open, close] as 24h decimals. index 0 = Sunday.
    Edit here to update the whole site's open/closed logic.
    ============================================================ */
-/* EDIT: multiple secondary listings (Restaurantji, an aggregator search snippet) agree Mon-Wed
-   all close at 7pm; the prior 7:30pm Wednesday close in this file didn't match any source found
-   during the 2026-07-15 research pass, so it's been straightened to 7pm. Re-confirm against the
-   live Google listing before launch — hours are exactly the kind of fact that drifts. */
-const HOURS={0:[11,15],1:[11,19],2:[11,19],3:[11,19],4:[11,22],5:[11,22],6:[11,22]};
+/* EDIT (2026-07-23): hours updated from the current printed in-restaurant menu (the most
+   direct source available) — Sunday is unchanged at 11am-3pm, but Monday-Saturday now run
+   11am to 1am. Close times past midnight are stored as 24+h (e.g. 1am = 25) so a single
+   [open,close] pair still describes one continuous business day; fmt() and computeStatus()
+   below both know how to read that. */
+const HOURS={0:[11,15],1:[11,25],2:[11,25],3:[11,25],4:[11,25],5:[11,25],6:[11,25]};
 const DAYS=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
-const fmt=t=>{const h=Math.floor(t),m=Math.round((t-h)*60),ap=h>=12?"pm":"am";let hh=h%12;if(hh===0)hh=12;return m?`${hh}:${m.toString().padStart(2,"0")}${ap}`:`${hh}${ap}`;};
+const fmt=t=>{const hRaw=Math.floor(t),h=hRaw%24,m=Math.round((t-hRaw)*60),ap=h>=12?"pm":"am";let hh=h%12;if(hh===0)hh=12;return m?`${hh}:${m.toString().padStart(2,"0")}${ap}`:`${hh}${ap}`;};
 
 /* EDIT (2026-07-15 browser QA): the open/closed logic previously read new Date().getDay()/
    getHours(), which is the VISITOR's device clock/timezone, not Everett's. A visitor browsing
@@ -1405,9 +1399,10 @@ function nowInPacific(){
 }
 
 function computeStatus(){
-  const{day,t}=nowInPacific(),today=HOURS[day];
+  const{day,t}=nowInPacific(),today=HOURS[day],yesterday=HOURS[(day+6)%7];
   let open=false,closesAt=null,nextDay=day,nextOpen=null;
-  if(today&&t>=today[0]&&t<today[1]){open=true;closesAt=today[1];}
+  if(yesterday&&yesterday[1]>24&&t<yesterday[1]-24){open=true;closesAt=yesterday[1]-24;}
+  else if(today&&t>=today[0]&&t<today[1]){open=true;closesAt=today[1];}
   if(!open){
     for(let i=0;i<7;i++){const d=(day+i)%7,h=HOURS[d];if(!h)continue;
       if(i===0&&t<h[0]){nextDay=d;nextOpen=h[0];break;}
