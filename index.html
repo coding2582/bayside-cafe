@@ -395,6 +395,13 @@ h1,h2,h3{font-family:var(--f-display);line-height:1.06;font-weight:600;letter-sp
 .customize summary::after{content:"+";font-size:1.3rem;color:var(--sage);transition:transform var(--t-fast)}
 .customize[open] summary::after{transform:rotate(45deg)}
 .customize .cbody{padding:0 1.25rem 1.2rem;color:var(--muted);font-size:.92rem}
+.customize .cbody-note{margin-bottom:1.1rem}
+.extras-grid{display:grid;grid-template-columns:1fr 1fr;gap:.5rem 1.6rem}
+.extras-col h5{font-family:var(--f-stamp);font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--gold-deep);margin-bottom:.4rem}
+.extras-row{display:flex;justify-content:space-between;gap:1rem;padding:.4rem 0;border-bottom:1px dashed var(--line);font-size:.9rem}
+.extras-row:last-child{border-bottom:none}
+.extras-row .p{color:var(--gold-deep);font-weight:600;white-space:nowrap}
+@media(max-width:620px){.extras-grid{grid-template-columns:1fr;gap:0 0}.extras-col{margin-bottom:.8rem}.extras-col:last-child{margin-bottom:0}}
 
 /* ============================================================
    FAQ
@@ -615,6 +622,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
 @media(max-width:620px){
   .fav-grid{grid-template-columns:1fr}
   .fav-grid .featured{grid-column:auto}
+  .fav-grid .card:nth-of-type(2){display:none}
   .foot-grid{grid-template-columns:1fr}
   .hero-btns .btn,.cta-acts .btn{flex:1}
   .review-card{width:82vw;max-width:330px}
@@ -876,7 +884,30 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
           </div>
           <details class="customize">
             <summary>Sauces &amp; extras <span aria-hidden="true"></span></summary>
-            <div class="cbody">Every sauce and side here is already vegan, so there's nothing to swap out for a plant-based version. Sauces: ranch, habanero ranch, sriracha aioli, BBQ, sweet mustard, and mango habanero are $.50 each; blue cheeze is $2. Extras: coleslaw, side salad, side of fries, and side of tots are $8 each; a Yo Egg add-on is $7 and bacun is $5.</div>
+            <div class="cbody">
+              <p class="cbody-note">Every sauce and side here is already vegan, so there's nothing to swap out for a plant-based version.</p>
+              <div class="extras-grid">
+                <div class="extras-col">
+                  <h5>Sauces</h5>
+                  <div class="extras-row"><span>Ranch</span><span class="p">$.50</span></div>
+                  <div class="extras-row"><span>Habanero Ranch</span><span class="p">$.50</span></div>
+                  <div class="extras-row"><span>Sriracha Aioli</span><span class="p">$.50</span></div>
+                  <div class="extras-row"><span>BBQ</span><span class="p">$.50</span></div>
+                  <div class="extras-row"><span>Sweet Mustard</span><span class="p">$.50</span></div>
+                  <div class="extras-row"><span>Mango Habanero</span><span class="p">$.50</span></div>
+                  <div class="extras-row"><span>Blue Cheeze</span><span class="p">$2</span></div>
+                </div>
+                <div class="extras-col">
+                  <h5>Extras</h5>
+                  <div class="extras-row"><span>Coleslaw</span><span class="p">$8</span></div>
+                  <div class="extras-row"><span>Side Salad</span><span class="p">$8</span></div>
+                  <div class="extras-row"><span>Side of Fries</span><span class="p">$8</span></div>
+                  <div class="extras-row"><span>Side of Tots</span><span class="p">$8</span></div>
+                  <div class="extras-row"><span>Yo Egg</span><span class="p">$7</span></div>
+                  <div class="extras-row"><span>Bacun</span><span class="p">$5</span></div>
+                </div>
+              </div>
+            </div>
           </details>
         </div>
       </div>
