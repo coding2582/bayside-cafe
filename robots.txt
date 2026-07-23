@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://thebaysidecafe.com/sitemap.xml

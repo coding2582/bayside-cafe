@@ -1,3 +1,6 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <!-- ============================================================
      THE BAYSIDE CAFE — Everett's Vegan Diner & Lounge
      Warm editorial rebrand: cream / deep sage / muted gold / ink.
@@ -6,22 +9,27 @@
      ============================================================ -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Bayside Cafe — Everett's 100% Vegan Diner &amp; Lounge</title>
-<meta name="description" content="The Bayside Cafe is Everett's all-vegan diner and lounge. Plant-based burgers, brats, hand-breaded chick'n and loaded nachos. 4.7 stars on Google, 500+ reviews. Open 7 days." />
+<meta name="robots" content="index, follow" />
+<title>The Bayside Cafe: Everett's 100% Vegan Diner &amp; Lounge</title>
+<meta name="description" content="The Bayside Cafe is Everett's all-vegan diner and lounge. Plant-based burgers, brats, hand-breaded chick'n, and loaded nachos. 4.7 stars on Google, 500+ reviews. Open 7 days." />
 <meta name="keywords" content="vegan restaurant near me, vegan food Everett, vegan diner Everett WA, plant-based burgers Everett, vegan restaurant Everett Washington, The Bayside Cafe, vegan lounge Everett" />
 <meta name="author" content="The Bayside Cafe" />
 <link rel="canonical" href="https://thebaysidecafe.com/" />
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
 
 <meta property="og:type" content="restaurant" />
-<meta property="og:title" content="The Bayside Cafe — Everett's 100% Vegan Diner &amp; Lounge" />
-<meta property="og:description" content="Plant-based comfort food in downtown Everett. Burgers, brats, hand-breaded chick'n and loaded nachos. 4.7 stars on Google, 500+ reviews." />
-<meta property="og:image" content="images/hero.jpg" />
+<meta property="og:title" content="The Bayside Cafe: Everett's 100% Vegan Diner &amp; Lounge" />
+<meta property="og:description" content="Plant-based comfort food in downtown Everett. Burgers, brats, hand-breaded chick'n, and loaded nachos. 4.7 stars on Google, 500+ reviews." />
+<meta property="og:image" content="https://thebaysidecafe.com/images/hero.jpg" />
+<meta property="og:image:width" content="1024" />
+<meta property="og:image:height" content="1024" />
 <meta property="og:url" content="https://thebaysidecafe.com/" />
 <meta property="og:locale" content="en_US" />
+<meta property="og:site_name" content="The Bayside Cafe" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="The Bayside Cafe — Everett's 100% Vegan Diner &amp; Lounge" />
+<meta name="twitter:title" content="The Bayside Cafe: Everett's 100% Vegan Diner &amp; Lounge" />
 <meta name="twitter:description" content="Plant-based comfort food in downtown Everett. 4.7 stars on Google, 500+ reviews. Open 7 days." />
-<meta name="twitter:image" content="images/hero.jpg" />
+<meta name="twitter:image" content="https://thebaysidecafe.com/images/hero.jpg" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -42,7 +50,7 @@
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "The Bayside Cafe",
-  "description": "Everett's 100% vegan diner and lounge. Plant-based burgers, hand-breaded chick'n, brats and loaded nachos.",
+  "description": "Everett's 100% vegan diner and lounge. Plant-based burgers, hand-breaded chick'n, brats, and loaded nachos.",
   "servesCuisine": "Vegan",
   "priceRange": "$$",
   "telephone": "+1-425-418-0640",
@@ -239,21 +247,17 @@ h1,h2,h3{font-family:var(--f-display);line-height:1.06;font-weight:600;letter-sp
 @keyframes wordIn{to{opacity:1;transform:none}}
 .hero .sub{font-size:clamp(1.05rem,2vw,1.22rem);max-width:34rem;color:var(--muted);margin-bottom:2rem}
 .hero-btns{display:flex;gap:.9rem;flex-wrap:wrap;margin-bottom:2.4rem}
-.trust-row{display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
-.avatar-stack{display:flex}
-.avatar-stack .avatar{width:38px;height:38px;font-size:.76rem;border:3px solid var(--paper);margin-left:-12px}
-.avatar-stack .avatar:first-child{margin-left:0}
-.trust-meta{display:flex;flex-direction:column;line-height:1.3}
-.trust-meta .stars{color:var(--gold);font-size:.95rem}
-.trust-meta small{color:var(--muted);font-size:.82rem}
 
 .hero-visual{position:relative}
 .bento-collage{display:grid;grid-template-columns:1.2fr 1fr;grid-template-rows:auto auto;gap:.9rem;position:relative}
+.bento-collage figure{position:relative}
 .bento-collage .b1{grid-row:span 2;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-lg);aspect-ratio:3/4}
 .bento-collage .b2{border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:5/4}
 .bento-collage .b3{border-radius:var(--r-md);overflow:hidden;box-shadow:var(--shadow-md);aspect-ratio:5/4}
 .bento-collage img{width:100%;height:100%;object-fit:cover;transition:transform var(--t-slow)}
 .bento-collage figure:hover img{transform:scale(1.06)}
+.hero-visual-tag{font-family:var(--f-display);font-weight:600;font-size:clamp(1rem,1.8vw,1.2rem);
+  color:var(--sage);text-align:center;margin-bottom:.8rem}
 .float-card{position:absolute;background:var(--white);border-radius:var(--r-md);box-shadow:var(--shadow-lg);
   padding:1rem 1.3rem;display:flex;align-items:center;gap:.8rem;z-index:3}
 .float-card.rating{top:-22px;right:-18px}
@@ -272,11 +276,11 @@ h1,h2,h3{font-family:var(--f-display);line-height:1.06;font-weight:600;letter-sp
 .stats-bar{position:relative;overflow:hidden;background:var(--paper-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;padding:2.6rem 0}
 .stat-tile{text-align:center}
-.stat-tile .n{font-family:var(--f-display);font-size:clamp(1.9rem,3.6vw,2.6rem);font-weight:600;color:var(--sage)}
+.stat-tile .n{font-family:var(--f-display);font-size:clamp(2.4rem,4.6vw,3.4rem);font-weight:700;color:var(--sage)}
 .stat-tile:nth-child(2) .n{color:var(--pink)}
 .stat-tile:nth-child(3) .n{color:var(--teal-deep)}
 .stat-tile:nth-child(4) .n{color:var(--gold-deep)}
-.stat-tile .l{font-family:var(--f-stamp);font-size:.98rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-top:.15rem}
+.stat-tile .l{font-family:var(--f-stamp);font-size:1.12rem;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink);margin-top:.3rem}
 
 /* ============================================================
    TICKER (dynamic-width seamless marquee)
@@ -360,7 +364,7 @@ h1,h2,h3{font-family:var(--f-display);line-height:1.06;font-weight:600;letter-sp
 .menu-wrap{display:grid;grid-template-columns:350px 1fr;gap:2.8rem;align-items:start}
 .menu-side{position:sticky;top:calc(var(--nav-h) + 20px)}
 .menu-photo{border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--shadow-md);margin-bottom:1.4rem;aspect-ratio:4/5;position:relative}
-.menu-photo img{width:100%;height:100%;object-fit:cover}
+.menu-photo img{position:absolute;top:50%;left:50%;width:125%;height:80%;object-fit:cover;transform:translate(-50%,-50%) rotate(-90deg)}
 .menu-photo .tag{position:absolute;left:16px;bottom:16px;background:rgba(42,38,32,.74);backdrop-filter:blur(6px);
   color:#fff;font-size:.8rem;font-weight:600;padding:.5rem .95rem;border-radius:var(--r-pill)}
 .tabs{display:flex;flex-direction:column;gap:.55rem}
@@ -390,6 +394,18 @@ h1,h2,h3{font-family:var(--f-display);line-height:1.06;font-weight:600;letter-sp
 .customize summary::after{content:"+";font-size:1.3rem;color:var(--sage);transition:transform var(--t-fast)}
 .customize[open] summary::after{transform:rotate(45deg)}
 .customize .cbody{padding:0 1.25rem 1.2rem;color:var(--muted);font-size:.92rem}
+
+/* ============================================================
+   FAQ
+   ============================================================ */
+.faq-list{display:flex;flex-direction:column;gap:.9rem;max-width:800px;margin:0 auto}
+.faq-item{border:1px solid var(--line);border-radius:var(--r-sm);background:var(--white);overflow:hidden}
+.faq-item summary{cursor:pointer;list-style:none;padding:1.15rem 1.4rem;font-weight:600;font-size:1.05rem;
+  font-family:var(--f-display);display:flex;justify-content:space-between;align-items:center;gap:1rem;color:var(--ink)}
+.faq-item summary::-webkit-details-marker{display:none}
+.faq-item summary::after{content:"+";font-size:1.5rem;color:var(--sage);transition:transform var(--t-fast);flex-shrink:0}
+.faq-item[open] summary::after{transform:rotate(45deg)}
+.faq-item p{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.98rem;line-height:1.65}
 
 /* ============================================================
    STORY
@@ -498,6 +514,7 @@ h1,h2,h3{font-family:var(--f-display);line-height:1.06;font-weight:600;letter-sp
   padding:.65rem .7rem calc(.65rem + env(safe-area-inset-bottom));
   background:rgba(250,245,233,.94);backdrop-filter:blur(14px);border-top:1px solid var(--line);box-shadow:0 -8px 28px rgba(42,38,32,.1)}
 .mobile-bar a{flex:1;padding:.85rem 1rem;font-size:.92rem}
+.mobile-bar.hide{display:none}
 
 /* ============================================================
    REVEAL
@@ -570,6 +587,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
   .menu-wrap{grid-template-columns:1fr}
   .menu-side{position:static}
   .menu-photo{aspect-ratio:16/9}
+  .menu-photo img{width:56.25%;height:177.78%}
   .tabs{flex-direction:row;flex-wrap:wrap}
   .tab{flex:1;min-width:140px;justify-content:center}
   .tab .arr{display:none}
@@ -579,8 +597,9 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
   .story-photo{max-width:470px;margin:0 auto 2.4rem}
   .fav-grid{grid-template-columns:1fr 1fr}
   .fav-grid .featured{grid-row:auto;grid-column:span 2}
+  .fav-grid .featured .card-img{aspect-ratio:16/9;flex:none;min-height:0}
   .foot-grid{grid-template-columns:1fr 1fr}
-  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-grid{gap:1rem}
 }
 @media(max-width:800px){
   .nav-links,.nav-call,.nav .btn-primary{display:none}
@@ -603,13 +622,16 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
   .float-card.rating{top:-14px;right:-8px;padding:.7rem 1rem}
   .float-card .num{font-size:1.4rem}
   .float-pill{left:-8px;bottom:12px;padding:.55rem .9rem;font-size:.76rem}
-  .stats-grid{grid-template-columns:1fr 1fr;gap:1.4rem}
+  .stats-grid{gap:.5rem}
+  .stat-tile .n{font-size:1.6rem}
+  .stat-tile .l{font-size:.72rem;letter-spacing:.02em}
 }
 @media(min-width:820px) and (max-width:1180px){
   .hero-visual{max-width:none}
   .fav-grid{grid-template-columns:1fr 1fr}
   .fav-grid .card:nth-of-type(2){display:none}
   .fav-grid .featured{grid-row:auto;grid-column:auto}
+  .fav-grid .featured .card-img{aspect-ratio:4/3;flex:none;min-height:0}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;scroll-behavior:auto;transition-duration:.01ms!important}
@@ -617,6 +639,8 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
   .hero h1 .word{opacity:1;transform:none}
 }
 </style>
+</head>
+<body>
 
 <div class="grain" aria-hidden="true"></div>
 <div class="progress" id="progress" aria-hidden="true"></div>
@@ -638,6 +662,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
         <li><a href="#menu">Menu</a></li>
         <li><a href="#story">Our Story</a></li>
         <li><a href="#visit">Visit</a></li>
+        <li><a href="#faq">FAQ</a></li>
       </ul>
     </nav>
     <div class="nav-cta">
@@ -656,6 +681,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
   <a href="#menu">Menu</a>
   <a href="#story">Our Story</a>
   <a href="#visit">Visit</a>
+  <a href="#faq">FAQ</a>
   <a href="https://www.ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE4MDIlMjBIZXdpdHQlMjBBdmUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJjODlkOTBlMi0zMjYyLTcwNDAtYzZiZi0zZGFmOWRmZGExOGElMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ3Ljk3OTEwMjMlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIyLjIwNTU2NDIlN0Q%3D" data-order target="_blank" rel="noopener" class="btn btn-primary">Order Online</a>
   <a href="tel:+14254180640" class="btn btn-ghost">Call 425-418-0640</a>
 </div>
@@ -666,60 +692,61 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
 <!-- ===================== HERO ===================== -->
 <section class="hero">
   <svg class="octo-deco" width="190" height="206" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:60px;left:-55px;transform:rotate(-18deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
   </svg>
   <svg class="octo-deco" width="100" height="108" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:120px;right:4%;transform:rotate(14deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
   </svg>
   <svg class="octo-deco" width="76" height="82" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:6%;left:6%;transform:rotate(9deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
   </svg>
   <div class="container">
     <div class="hero-copy">
       <span class="pill"><span class="dot" id="heroDot"></span><span id="heroStatus">Open now · Everett, WA</span></span>
-      <h1 id="heroHeadline" aria-label="Comfort food, gone fully vegan.">Comfort food,<br>gone <span class="accent-i">fully vegan.</span></h1>
-      <p class="sub">Pull up a booth at Everett's all-vegan diner and lounge. Stacked burgers, hand-breaded chick'n and loaded nachos that taste like the place you grew up on. Everyone's welcome here.</p>
+      <h1 id="heroHeadline" aria-label="The Bayside Vegan">The Bayside <span class="accent-i">Vegan</span></h1>
+      <p class="sub">Pull up a booth at Everett's all-vegan diner and lounge, where stacked burgers, hand-breaded chick'n, and loaded nachos deliver the comfort food flavor you remember. Everyone is welcome here.</p>
       <div class="hero-btns">
         <a href="https://www.ubereats.com/store/the-bayside/ENUaKSSXWUuRH6wc_ZfUPQ?pl=JTdCJTIyYWRkcmVzcyUyMiUzQSUyMjE4MDIlMjBIZXdpdHQlMjBBdmUlMjIlMkMlMjJyZWZlcmVuY2UlMjIlM0ElMjJjODlkOTBlMi0zMjYyLTcwNDAtYzZiZi0zZGFmOWRmZGExOGElMjIlMkMlMjJyZWZlcmVuY2VUeXBlJTIyJTNBJTIydWJlcl9wbGFjZXMlMjIlMkMlMjJsYXRpdHVkZSUyMiUzQTQ3Ljk3OTEwMjMlMkMlMjJsb25naXR1ZGUlMjIlM0EtMTIyLjIwNTU2NDIlN0Q%3D" data-order target="_blank" rel="noopener" class="btn btn-primary">Order Online
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
         <a href="#menu" class="btn btn-outline">See the Menu</a>
       </div>
-      <div class="trust-row">
-        <div class="avatar-stack" aria-hidden="true">
-          <div class="avatar">HP</div><div class="avatar">II</div><div class="avatar">JC</div><div class="avatar">JB</div>
-        </div>
-        <div class="trust-meta">
-          <span class="stars">★★★★★ <b>4.7</b></span>
-          <small>500+ reviews on Google &amp; HappyCow</small>
-        </div>
-      </div>
     </div>
     <div class="hero-visual" id="heroVisual">
+      <p class="hero-visual-tag">Top rated vegan spot around town!</p>
       <div class="bento-collage">
-        <figure class="b1"><img loading="eager" src="images/hero.jpg" alt="A crispy hand-breaded vegan chick'n sandwich with curly fries at The Bayside Cafe"
+        <figure class="b1"><img loading="eager" src="images/sandwhich.png" alt="A crispy hand-breaded vegan chick'n sandwich with curly fries at The Bayside Cafe"
           onerror="this.src='https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=1000&q=80'" /></figure>
-        <figure class="b2"><img loading="lazy" src="images/product-bomber.jpg" alt="The Bomber vegan burger served with tater tots"
+        <figure class="b2"><img loading="lazy" src="images/burger.png" alt="The Bomber vegan burger served with tater tots"
           onerror="this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=80'" /></figure>
-        <figure class="b3"><img loading="lazy" src="images/product-nachos.jpg" alt="The future is vegan neon sign on the wall inside The Bayside Cafe"
+        <figure class="b3"><img loading="lazy" src="images/cafe.jpg" alt="Booth seating inside The Bayside Cafe's dining room"
           onerror="this.src='https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=700&q=80'" /></figure>
       </div>
       <div class="float-card rating">
@@ -736,24 +763,6 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
 
 <!-- ===================== STATS ===================== -->
 <section class="stats-bar">
-  <svg class="octo-deco" width="86" height="93" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:50%;left:3%;transform:translateY(-50%) rotate(-22deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-  </svg>
-  <svg class="octo-deco" width="72" height="78" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:-10px;right:8%;transform:rotate(16deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-  </svg>
   <div class="container stats-grid">
     <div class="stat-tile reveal"><div class="n">4.7★</div><div class="l">Google Rating</div></div>
     <div class="stat-tile reveal d1"><div class="n">500+</div><div class="l">Google Reviews</div></div>
@@ -769,104 +778,36 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
   </div>
 </div>
 
-<!-- ===================== FAVORITES ===================== -->
-<section class="section" id="favorites">
-  <svg class="octo-deco" width="150" height="163" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:30px;right:-45px;transform:rotate(20deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-  </svg>
-  <svg class="octo-deco" width="88" height="95" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:12%;left:2%;transform:rotate(-25deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-  </svg>
-  <svg class="octo-deco" width="64" height="69" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:46%;right:14%;transform:rotate(6deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-  </svg>
-  <div class="container">
-    <div class="head reveal">
-      <span class="eyebrow">Crowd Pleasers</span>
-      <h2>The ones people <span class="accent-i">come back for.</span></h2>
-      <p>Everything on this list is fully plant-based. Nobody misses the meat, we promise.</p>
-    </div>
-    <div class="fav-grid">
-      <article class="card featured reveal">
-        <div class="card-img">
-          <img loading="lazy" src="images/product-bomber.jpg" alt="The Classic vegan burger served with tater tots"
-            onerror="this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80'" />
-        </div>
-        <span class="badge">Most Loved</span>
-        <div class="card-body">
-          <div class="row"><h3>The Classic</h3><span class="price">$13</span></div>
-          <p>Lettuce, tomato, Chao cheese, onions, pickles and mayo. The one that never leaves the menu.</p>
-        </div>
-      </article>
-      <article class="card reveal d1">
-        <div class="card-img">
-          <img loading="lazy" src="images/product-chickun.jpg" alt="Crispy hand-breaded vegan chick'n sandwich with curly fries"
-            onerror="this.src='https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=800&q=80'" />
-        </div>
-        <span class="badge sage">Fan Favorite</span>
-        <div class="card-body">
-          <div class="row"><h3>Chicken Ghost Sandwich</h3><span class="price">$16</span></div>
-          <p>Crispy chickun, spicy aioli, tomatoes, onions, lettuce, pickles and nacho cheese sauce.</p>
-        </div>
-      </article>
-      <article class="card reveal d2">
-        <div class="card-img">
-          <img loading="lazy" src="images/menu-feature.jpg" alt="Loaded vegan Nachitos with jalapenos, beans and nacho cheese"
-            onerror="this.src='https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&q=80'" />
-        </div>
-        <span class="badge pink">Table Starter</span>
-        <div class="card-body">
-          <div class="row"><h3>Nachitos</h3><span class="price">$13</span></div>
-          <p>Nacho cheese sauce, meatless crumbles, jalapeños, onions, tomatoes and black beans.</p>
-        </div>
-      </article>
-    </div>
-  </div>
-</section>
-
 <!-- ===================== MENU ===================== -->
 <section class="section" id="menu" style="background:var(--paper-2)">
   <svg class="octo-deco" width="140" height="152" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:8%;left:-40px;transform:rotate(-20deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
   </svg>
   <svg class="octo-deco" width="66" height="72" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:4%;right:5%;transform:rotate(15deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
   </svg>
   <div class="container">
     <div class="head reveal">
       <span class="eyebrow">The Menu</span>
-      <h2>Everything's <span class="accent-i">vegan.</span> Everything's good.</h2>
-      <p>Pick a category. Honest prices, generous portions, zero animal products.</p>
+      <h2>Everything's <span class="accent-i">vegan.</span></h2>
     </div>
     <div class="menu-wrap">
       <aside class="menu-side reveal">
@@ -891,28 +832,28 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
            this one shift, so reconfirm against Uber Eats (or the physical menu) before launch. -->
       <div class="menu-panels reveal d1">
         <div class="panel active" id="burgers" role="tabpanel" aria-labelledby="tab-burgers">
-          <div class="m-item"><div><h4>The Classic</h4><p>Lettuce, tomato, Chao cheese, onions, pickles and mayo. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$13</span></div>
-          <div class="m-item"><div><h4>Scorpion Burger</h4><p>Chao cheese, sriracha aioli, jalapeños, onions, nacho cheese and salsa. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$16</span></div>
-          <div class="m-item"><div><h4>Bacon Burger</h4><p>Vegan bacon, grilled mushrooms, Chao cheese, onions, mayo and guacamole. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$16</span></div>
-          <div class="m-item"><div><h4>The Western Burger</h4><p>BBQ sauce, cheddar and mayo, topped with onion rings. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$14</span></div>
-          <div class="m-item"><div><h4>Good Catch Fish Burger</h4><p>Good Catch fish patty, fried pickles, house-made tartar, mayo, cheddar cheese and lettuce. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$14</span></div>
+          <div class="m-item"><div><h4>The Classic</h4><p>Lettuce, tomato, Chao cheese, onions, pickles, and mayo. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$13</span></div>
+          <div class="m-item"><div><h4>Scorpion Burger</h4><p>Chao cheese, sriracha aioli, jalapeños, onions, nacho cheese, and salsa. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$16</span></div>
+          <div class="m-item"><div><h4>Bacon Burger</h4><p>Vegan bacon, grilled mushrooms, Chao cheese, onions, mayo, and guacamole. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$16</span></div>
+          <div class="m-item"><div><h4>The Western Burger</h4><p>BBQ sauce, cheddar, and mayo, topped with onion rings. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$14</span></div>
+          <div class="m-item"><div><h4>Good Catch Fish Burger</h4><p>Good Catch fish patty, fried pickles, house-made tartar, mayo, cheddar cheese, and lettuce. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$14</span></div>
         </div>
         <div class="panel" id="sliders" role="tabpanel" aria-labelledby="tab-sliders" hidden>
-          <div class="m-item"><div><h4>Bacun Swiss Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Melted Swiss, bacon, mayo and guacamole. Comes with two sliders and a choice of tots, fries or curly fries.</p></div><span class="price">$17</span></div>
-          <div class="m-item"><div><h4>Buffalo Ranch Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Buffalo-tossed patty, lettuce, tomato and ranch. Comes with two sliders and a choice of tots, fries or curly fries.</p></div><span class="price">$17</span></div>
-          <div class="m-item"><div><h4>Classic Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Lettuce, tomato, pickle, onion and mayo. Comes with two sliders and a choice of tots, fries or curly fries.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Bacun Swiss Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Melted Swiss, bacon, mayo, and guacamole. Comes with two sliders and a choice of tots, fries, or curly fries.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Buffalo Ranch Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Buffalo-tossed patty, lettuce, tomato, and ranch. Comes with two sliders and a choice of tots, fries, or curly fries.</p></div><span class="price">$17</span></div>
+          <div class="m-item"><div><h4>Classic Chickun Sliders <small style="font-weight:400;color:var(--muted)">(2 pcs)</small></h4><p>Lettuce, tomato, pickle, onion, and mayo. Comes with two sliders and a choice of tots, fries, or curly fries.</p></div><span class="price">$17</span></div>
         </div>
         <div class="panel" id="sandwiches" role="tabpanel" aria-labelledby="tab-sandwiches" hidden>
-          <div class="m-item"><div><h4>Breakfast Sandwich</h4><p>Hash brown, Just Egg, cheddar cheese, mayo and Impossible sausage.</p></div><span class="price">$16</span></div>
-          <div class="m-item"><div><h4>Chicken Burger</h4><p>Crispy chickun, ranch Buffalo sauce, tomato, pickles, onions, mayo and lettuce.</p></div><span class="price">$16</span></div>
-          <div class="m-item"><div><h4>Chicken Ghost Sandwich</h4><p>Crispy chickun, spicy aioli, tomatoes, onions, lettuce, pickles and nacho cheese sauce.</p></div><span class="price">$16</span></div>
+          <div class="m-item"><div><h4>Breakfast Sandwich</h4><p>Hash brown, Just Egg, cheddar cheese, mayo, and Impossible sausage.</p></div><span class="price">$16</span></div>
+          <div class="m-item"><div><h4>Chicken Burger</h4><p>Crispy chickun, ranch Buffalo sauce, tomato, pickles, onions, mayo, and lettuce.</p></div><span class="price">$16</span></div>
+          <div class="m-item"><div><h4>Chicken Ghost Sandwich</h4><p>Crispy chickun, spicy aioli, tomatoes, onions, lettuce, pickles, and nacho cheese sauce.</p></div><span class="price">$16</span></div>
         </div>
         <div class="panel" id="dawgs" role="tabpanel" aria-labelledby="tab-dawgs" hidden>
-          <div class="m-item"><div><h4>The Sauerkraut Dawg</h4><p>Beyond Brat, sauerkraut, spicy mustard and onions. Served with a choice of curly fries, straight-cut fries or tots.</p></div><span class="price">$15</span></div>
-          <div class="m-item"><div><h4>Classic Hot Dawg</h4><p>Field Roast hot dog, mustard, ketchup, pickle and onion.</p></div><span class="price">$13</span></div>
+          <div class="m-item"><div><h4>The Sauerkraut Dawg</h4><p>Beyond Brat, sauerkraut, spicy mustard, and onions. Served with a choice of curly fries, straight-cut fries, or tots.</p></div><span class="price">$15</span></div>
+          <div class="m-item"><div><h4>Classic Hot Dawg</h4><p>Field Roast hot dog, mustard, ketchup, pickle, and onion.</p></div><span class="price">$13</span></div>
         </div>
         <div class="panel" id="apps" role="tabpanel" aria-labelledby="tab-apps" hidden>
-          <div class="m-item"><div><h4>Nachitos</h4><p>Nacho cheese sauce, meatless crumbles, jalapeños, onions, tomatoes and black beans.</p></div><span class="price">$13</span></div>
+          <div class="m-item"><div><h4>Nachitos</h4><p>Nacho cheese sauce, meatless crumbles, jalapeños, onions, tomatoes, and black beans.</p></div><span class="price">$13</span></div>
           <div class="m-item"><div><h4>Buffalo Wingz <small style="font-weight:400;color:var(--muted)">(6 pcs)</small></h4><p>Deep-fried vegan drumsticks on a sugar cane stick, tossed in buffalo sauce, with a side of ranch.</p></div><span class="price">$16</span></div>
           <div class="m-item"><div><h4>Bucket of Tots</h4><p>Crispy, bite-sized tots served in a bucket.</p></div><span class="price">$9</span></div>
           <div class="m-item"><div><h4>Fries</h4><p>Crispy, golden sticks served hot.</p></div><span class="price">$9</span></div>
@@ -935,10 +876,92 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
           </div>
           <details class="customize">
             <summary>Customize your order <span aria-hidden="true"></span></summary>
-            <div class="cbody">Every sauce and side here is already vegan, so there's nothing to swap out for a plant-based version. Most burgers, dawgs and sliders come with a choice of curly fries, straight-cut fries or tots — ask your server about swaps and current add-on pricing. <!-- EDIT: the prior "+$2 onion rings" figure quoted here wasn't present in the current Uber Eats listing, so it's been dropped rather than carried forward unverified. --></div>
+            <div class="cbody">Every sauce and side here is already vegan, so there's nothing to swap out for a plant-based version. Most burgers, dawgs, and sliders come with a choice of curly fries, straight-cut fries, or tots. Ask your server about swaps and current add-on pricing. <!-- EDIT: the prior "+$2 onion rings" figure quoted here wasn't present in the current Uber Eats listing, so it's been dropped rather than carried forward unverified. --></div>
           </details>
         </div>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FAVORITES ===================== -->
+<section class="section" id="favorites">
+  <svg class="octo-deco" width="150" height="163" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:30px;right:-45px;transform:rotate(20deg)">
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco" width="88" height="95" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:12%;left:2%;transform:rotate(-25deg)">
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <svg class="octo-deco" width="64" height="69" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:46%;right:14%;transform:rotate(6deg)">
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+  </svg>
+  <div class="container">
+    <div class="head reveal">
+      <span class="eyebrow">Crowd Pleasers</span>
+      <h2>The ones people <span class="accent-i">come back for.</span></h2>
+      <p>Everything on this list is fully plant-based, and nobody misses the meat, we promise.</p>
+    </div>
+    <div class="fav-grid">
+      <article class="card featured reveal">
+        <div class="card-img">
+          <img loading="lazy" src="images/product-bomber.jpg" alt="The Classic vegan burger served with tater tots"
+            onerror="this.src='https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=900&q=80'" />
+        </div>
+        <span class="badge">Most Loved</span>
+        <div class="card-body">
+          <div class="row"><h3>The Classic</h3><span class="price">$13</span></div>
+          <p>Lettuce, tomato, Chao cheese, onions, pickles, and mayo. The one that never leaves the menu.</p>
+        </div>
+      </article>
+      <article class="card reveal d1">
+        <div class="card-img">
+          <img loading="lazy" src="images/product-chickun.jpg" alt="Crispy hand-breaded vegan chick'n sandwich with curly fries"
+            onerror="this.src='https://images.unsplash.com/photo-1606755962773-d324e0a13086?auto=format&fit=crop&w=800&q=80'" />
+        </div>
+        <span class="badge sage">Fan Favorite</span>
+        <div class="card-body">
+          <div class="row"><h3>Chicken Ghost Sandwich</h3><span class="price">$16</span></div>
+          <p>Crispy chickun, spicy aioli, tomatoes, onions, lettuce, pickles, and nacho cheese sauce.</p>
+        </div>
+      </article>
+      <article class="card reveal d2">
+        <div class="card-img">
+          <img loading="lazy" src="images/curly%20fires.png" alt="The Chickun Ghost Sandwich with curly fries"
+            onerror="this.src='https://images.unsplash.com/photo-1513456852971-30c0b8199d4d?auto=format&fit=crop&w=800&q=80'" />
+        </div>
+        <span class="badge pink">Table Starter</span>
+        <div class="card-body">
+          <div class="row"><h3>Chickun Ghost</h3><span class="price">$13</span></div>
+          <p>Nacho cheese sauce, meatless crumbles, jalapeños, onions, tomatoes, and black beans.</p>
+        </div>
+      </article>
     </div>
   </div>
 </section>
@@ -971,7 +994,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
     <div class="atmos-box reveal">
       <span class="eyebrow on-dark">The Vibe</span>
       <h2>Part diner, part lounge, <span class="accent-t">all heart.</span></h2>
-      <p>Cozy booths, punk art on the walls, cold vegan beer and a neon glow. It's the kind of room where you settle in and lose track of time. Vegan or just curious, you belong here.</p>
+      <p>Cozy booths, punk art on the walls, cold vegan beer, and a neon glow set the scene here. It's the kind of room where you settle in and lose track of time. Vegan or just curious, you belong here.</p>
     </div>
   </div>
 </section>
@@ -979,22 +1002,28 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
 <!-- ===================== REVIEWS ===================== -->
 <section class="section reviews" id="reviews">
   <svg class="octo-deco" width="80" height="87" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:10%;right:6%;transform:rotate(-17deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
   </svg>
   <svg class="octo-deco" width="60" height="65" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:8%;left:3%;transform:rotate(13deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
   </svg>
   <div class="container">
     <div class="head reveal" style="margin-bottom:1.6rem">
@@ -1036,7 +1065,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
       <div class="reveal d1">
         <span class="eyebrow">Our Story</span>
         <p class="pull">"We wanted to prove vegan food could be the comfort food you crave, not the thing you settle for."</p>
-        <p class="body">Partners <b>Jasper and Ryan</b> opened The Bayside in August 2020, right in the thick of it, starting from a tiny space on Hewitt Avenue. Word got out fast, so they moved to a bigger space, kept the old dragon murals on the walls, and made the place their own. Today it's a full vegan diner and lounge where the burgers stack high and the door's open to everyone.</p>
+        <p class="body">Partners <b>Jasper and Ryan</b> opened The Bayside in August 2020, launching from a tiny space on Hewitt Avenue during a genuinely uncertain time. Word got out fast, so they moved into a larger space, kept the original dragon murals on the walls, and made it their own. Today it's a full vegan diner and lounge where the burgers stack high and the door's open to everyone.</p>
         <div class="values">
           <div class="value">
             <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3c-3 3-3 8 0 12 3-4 3-9 0-12zM12 15v6"/></svg></div>
@@ -1044,11 +1073,11 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
           </div>
           <div class="value">
             <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7-4.4-9-8.5C1.5 9 3.5 6 6.5 6 8.5 6 12 8 12 8s3.5-2 5.5-2c3 0 5 3 3.5 6.5C19 16.6 12 21 12 21z"/></svg></div>
-            <div><h4>Made From Scratch</h4><p>Hand-breaded chick'n, house sauces and a nacho cheese we're a little too proud of.</p></div>
+            <div><h4>Made From Scratch</h4><p>Hand-breaded chick'n, house-made sauces, and a nacho cheese we're especially proud of.</p></div>
           </div>
           <div class="value">
             <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a4 4 0 100-8 4 4 0 000 8zM4 20c0-3.3 3.6-6 8-6s8 2.7 8 6"/></svg></div>
-            <div><h4>Everyone Welcome</h4><p>Vegan, curious or just hungry. You'll leave full and in a good mood.</p></div>
+            <div><h4>Everyone Welcome</h4><p>Vegan, curious, or just hungry, you'll leave full and in a good mood.</p></div>
           </div>
         </div>
         <div class="story-btns">
@@ -1063,59 +1092,68 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
 <!-- ===================== VISIT ===================== -->
 <section class="section" id="visit" style="background:var(--paper-2)">
   <svg class="octo-deco" width="112" height="122" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:4%;left:-35px;transform:rotate(17deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
   </svg>
   <svg class="octo-deco" width="80" height="87" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="bottom:6%;right:3%;transform:rotate(-14deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
   </svg>
   <svg class="octo-deco" width="58" height="63" viewBox="0 0 120 130" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="top:52%;left:8%;transform:rotate(-24deg)">
-    <ellipse cx="60" cy="50" rx="38" ry="34" fill="#c1502e"/><ellipse cx="46" cy="36" rx="9" ry="12" fill="#e2916a" opacity="0.45"/>
-    <circle cx="46" cy="48" r="5" fill="#18120c"/><circle cx="74" cy="48" r="5" fill="#18120c"/>
-    <path d="M60 82 C58 94 63 102 59 114 C57 120 61 124 58 132" stroke="#8f3a1f" stroke-width="2.4" fill="none" stroke-linecap="round" opacity="0.7"/>
-    <path d="M45 80 C38 90 42 100 34 110 C30 116 34 120 30 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M75 80 C82 90 78 100 86 110 C90 116 86 120 90 128" stroke="#8f3a1f" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"/>
-    <path d="M28 70 C18 76 12 86 4 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
-    <path d="M92 70 C102 76 108 86 116 90" stroke="#8f3a1f" stroke-width="1.8" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <ellipse cx="60" cy="48" rx="37" ry="33" fill="#c1502e"/><ellipse cx="46" cy="34" rx="10" ry="13" fill="#e2916a" opacity="0.4"/>
+    <path d="M32 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M68 44h20a4 4 0 010 8h-20a4 4 0 010-8Z" fill="#18120c"/>
+    <path d="M52 47 Q60 43 68 47" stroke="#18120c" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    <path d="M48 66 Q60 74 72 66" stroke="#18120c" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M60 80 C58 92 63 100 59 114" stroke="#8f3a1f" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <path d="M44 78 C36 88 40 98 32 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M76 78 C84 88 80 98 88 108" stroke="#8f3a1f" stroke-width="2.6" fill="none" stroke-linecap="round" opacity="0.65"/>
+    <path d="M28 68 C18 76 12 84 4 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
+    <path d="M92 68 C102 76 108 84 116 90" stroke="#8f3a1f" stroke-width="2.2" fill="none" stroke-linecap="round" opacity="0.55"/>
   </svg>
   <div class="container">
     <div class="head reveal">
       <span class="eyebrow">Visit Us</span>
       <h2>Come <span class="accent-i">hungry.</span></h2>
-      <p>On West Marine View Drive in Everett, open seven days a week. Look for the black building with the octopus signs.</p>
+      <p>Find us on West Marine View Drive in Everett, open seven days a week, in the black building with the octopus signs.</p>
     </div>
     <div class="visit-grid">
       <div class="hours-card reveal">
         <div class="hours-head">
           <h3>Hours</h3>
-          <span class="status-badge" id="hoursBadge">—</span>
+          <span class="status-badge" id="hoursBadge">Hours</span>
         </div>
         <div id="hoursList"></div>
         <div class="closed-msg" id="closedMsg" style="display:none"></div>
         <div class="amenities">
-          <span class="chip">🌱 100% Vegan</span>
-          <span class="chip">🍺 Vegan Beer</span>
-          <span class="chip">🅿️ Street Parking</span>
-          <span class="chip">🥡 Takeout</span>
-          <span class="chip">♿ Accessible</span>
+          <span class="chip">100% Vegan</span>
+          <span class="chip">Vegan Beer</span>
+          <span class="chip">Street Parking</span>
+          <span class="chip">Takeout</span>
+          <span class="chip">Accessible</span>
         </div>
       </div>
       <div class="visit-right reveal d1">
         <div class="find-photo">
           <img loading="lazy" src="images/gallery-1.jpg" alt="Orange wall covered edge to edge in framed punk and rock art inside The Bayside Cafe's dining room"
             onerror="this.src='https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=900&q=80'" />
-          <span class="tag">🐙 The vibe from the second you walk in</span>
+          <span class="tag">The vibe from the second you walk in</span>
         </div>
         <div class="map-embed">
           <iframe title="Map to The Bayside Cafe" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
@@ -1133,6 +1171,68 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
     </div>
   </div>
 </section>
+
+<!-- ===================== FAQ ===================== -->
+<section class="section" id="faq" style="background:var(--paper-2)">
+  <div class="container">
+    <div class="head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions people <span class="accent-i">ask us.</span></h2>
+      <p>Everything worth knowing before your first visit to Everett's all-vegan diner and lounge.</p>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>Is The Bayside Cafe fully vegan?<span aria-hidden="true"></span></summary>
+        <p>Yes. Every item on the menu is 100% plant-based, from the burgers and hand-breaded chick'n to the nacho cheese sauce. No animal products, no exceptions.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Where is The Bayside Cafe located?<span aria-hidden="true"></span></summary>
+        <p>2913 W Marine View Dr, Everett, WA 98201. Look for the black building with the octopus signs on West Marine View Drive.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>What are The Bayside Cafe's hours?<span aria-hidden="true"></span></summary>
+        <p>Monday–Wednesday 11am–7pm, Thursday–Saturday 11am–10pm, and Sunday 11am–3pm. Open seven days a week.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Do you offer takeout or delivery?<span aria-hidden="true"></span></summary>
+        <p>Both. Call ahead for takeout, or order delivery through Uber Eats using the "Order Online" button on this page.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Is there parking near The Bayside Cafe?<span aria-hidden="true"></span></summary>
+        <p>Yes, street parking is available right outside on West Marine View Drive.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Do you have a kids menu?<span aria-hidden="true"></span></summary>
+        <p>Yes. The kids menu includes a plain burger, mini chick'n sandwich, hot dog, and chick'n nugs, each served with a choice of tots or fries.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>Do you serve alcohol?<span aria-hidden="true"></span></summary>
+        <p>We do. Vegan beer is on tap alongside the food menu.</p>
+      </details>
+      <details class="faq-item reveal">
+        <summary>What makes The Bayside Cafe different from other vegan restaurants?<span aria-hidden="true"></span></summary>
+        <p>Everything is made from scratch, including the hand-breaded chick'n, house-made sauces, and a nacho cheese sauce we're especially proud of. It's comfort food first, vegan second, built for anyone who just wants a good burger.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Is The Bayside Cafe fully vegan?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every item on the menu is 100% plant-based, from the burgers and hand-breaded chick'n to the nacho cheese sauce. No animal products, no exceptions." } },
+    { "@type": "Question", "name": "Where is The Bayside Cafe located?", "acceptedAnswer": { "@type": "Answer", "text": "2913 W Marine View Dr, Everett, WA 98201. Look for the black building with the octopus signs on West Marine View Drive." } },
+    { "@type": "Question", "name": "What are The Bayside Cafe's hours?", "acceptedAnswer": { "@type": "Answer", "text": "Monday–Wednesday 11am–7pm, Thursday–Saturday 11am–10pm, and Sunday 11am–3pm. Open seven days a week." } },
+    { "@type": "Question", "name": "Do you offer takeout or delivery?", "acceptedAnswer": { "@type": "Answer", "text": "Both. Call ahead for takeout, or order delivery through Uber Eats using the \"Order Online\" button on this page." } },
+    { "@type": "Question", "name": "Is there parking near The Bayside Cafe?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, street parking is available right outside on West Marine View Drive." } },
+    { "@type": "Question", "name": "Do you have a kids menu?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. The kids menu includes a plain burger, mini chick'n sandwich, hot dog, and chick'n nugs, each served with a choice of tots or fries." } },
+    { "@type": "Question", "name": "Do you serve alcohol?", "acceptedAnswer": { "@type": "Answer", "text": "We do. Vegan beer is on tap alongside the food menu." } },
+    { "@type": "Question", "name": "What makes The Bayside Cafe different from other vegan restaurants?", "acceptedAnswer": { "@type": "Answer", "text": "Everything is made from scratch, including the hand-breaded chick'n, house-made sauces, and a nacho cheese sauce we're especially proud of. It's comfort food first, vegan second, built for anyone who just wants a good burger." } }
+  ]
+}
+</script>
 
 <!-- ===================== COMMUNITY CTA ===================== -->
 <section class="section cta-dark">
@@ -1166,7 +1266,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
   <div class="container">
     <span class="eyebrow on-dark" style="justify-content:center">Pull Up a Booth</span>
     <h2>Everett's table for <span class="accent-t">everyone.</span></h2>
-    <p>Been vegan for years or just want a really good burger? Either way, there's a seat and a stacked plate waiting for you.</p>
+    <p>Whether you've been vegan for years or just want a really good burger, there's a seat and a stacked plate waiting for you.</p>
     <div class="cta-acts">
       <a href="https://www.google.com/maps/dir/?api=1&destination=The+Bayside+Cafe+2913+W+Marine+View+Dr+Everett+WA&destination_place_id=ChIJe2BioNSrmlQRik77LVaMgXY" target="_blank" rel="noopener" class="btn btn-gold">Get Directions</a>
       <a href="tel:+14254180640" class="btn btn-ghost">Call 425-418-0640</a>
@@ -1226,6 +1326,7 @@ img{filter:saturate(1.16) contrast(1.08) brightness(1.03)}
           <li><a href="#menu">Menu</a></li>
           <li><a href="#story">Our Story</a></li>
           <li><a href="#visit">Visit Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -1364,18 +1465,21 @@ scrolltop.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}
 /* mobile overlay — open/close, Escape to close, and focus handling.
    EDIT (2026-07-15 browser QA): confirmed via Playwright that Escape previously did nothing
    and focus was never moved into or back out of the overlay — added both. */
-const overlay=document.getElementById("overlay"),hamburger=document.getElementById("hamburger");
+const overlay=document.getElementById("overlay"),hamburger=document.getElementById("hamburger"),
+      mobileBar=document.querySelector(".mobile-bar");
 const overlayFocusable=()=>[...overlay.querySelectorAll("a,button")];
 function openMenu(){
   overlay.classList.add("open");
   hamburger.setAttribute("aria-expanded","true");
   document.body.style.overflow="hidden";
+  mobileBar?.classList.add("hide");
   overlayFocusable()[0]?.focus();
 }
 function closeMenu(){
   overlay.classList.remove("open");
   hamburger.setAttribute("aria-expanded","false");
   document.body.style.overflow="";
+  mobileBar?.classList.remove("hide");
   hamburger.focus();
 }
 hamburger.addEventListener("click",()=>{overlay.classList.contains("open")?closeMenu():openMenu();});
@@ -1620,3 +1724,5 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>{
       Mosbacher and Ryan Housner.
 ============================================================
 -->
+</body>
+</html>
